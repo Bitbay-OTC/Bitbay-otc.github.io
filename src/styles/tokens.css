@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Design tokens — BitBay OTC Desk
+
+   Light is the default palette. Dark is applied via [data-theme="dark"] on
+   the root element, and follows the system preference when the operator has
+   not chosen explicitly.
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --bg:           #eceff5;
+  --surface:      #ffffff;
+  --surface-2:    #f6f8fc;
+  --surface-3:    #eef2f8;
+  --surface-sunk: #e4e9f2;
+
+  /* Lines */
+  --line:        #dce3ee;
+  --line-strong: #c2cddd;
+
+  /* Ink */
+  --ink:     #0b1220;
+  --ink-2:   #45536a;
+  --ink-3:   #72819a;
+  --on-accent: #ffffff;
+
+  /* Accent — institutional blue */
+  --accent:       #1a52c4;
+  --accent-hover: #1544a5;
+  --accent-soft:  #e7eefc;
+  --accent-line:  #b6cbf2;
+
+  /* Direction semantics. Buy = taker acquires crypto. */
+  --buy:       #0a7a55;
+  --buy-soft:  #e0f4ed;
+  --buy-line:  #9fd9c5;
+  --sell:      #b03a12;
+  --sell-soft: #fdeee7;
+  --sell-line: #f4c3ac;
+
+  /* Settlement status bands */
+  --st-open:          #1a52c4;
+  --st-open-soft:     #e7eefc;
+  --st-active:        #5b3bc4;
+  --st-active-soft:   #eee9fc;
+  --st-attention:     #97590a;
+  --st-attention-soft:#fdf0dc;
+  --st-settled:       #0a7a55;
+  --st-settled-soft:  #e0f4ed;
+  --st-closed:        #5a6779;
+  --st-closed-soft:   #eaedf2;
+  --st-danger:        #b3251b;
+  --st-danger-soft:   #fdeceb;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px rgba(11, 18, 32, .06);
+  --shadow-2: 0 2px 8px rgba(11, 18, 32, .08), 0 1px 2px rgba(11, 18, 32, .05);
+  --shadow-3: 0 16px 40px rgba(11, 18, 32, .16), 0 2px 8px rgba(11, 18, 32, .08);
+
+  /* Geometry */
+  --r-sm: 4px;
+  --r:    6px;
+  --r-lg: 10px;
+  --r-pill: 100px;
+
+  --rail:   238px;
+  --topbar: 56px;
+
+  /* Type */
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", monospace;
+
+  --focus-ring: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent);
+
+  color-scheme: light;
+}
+
+/* Explicit dark choice */
+:root[data-theme='dark'] {
+  --bg:           #06090f;
+  --surface:      #0d131e;
+  --surface-2:    #121a28;
+  --surface-3:    #172131;
+  --surface-sunk: #090e17;
+
+  --line:        #1d2839;
+  --line-strong: #2b3a52;
+
+  --ink:     #e7edf8;
+  --ink-2:   #a1b1c8;
+  --ink-3:   #6f8199;
+  --on-accent: #04101f;
+
+  --accent:       #5090ff;
+  --accent-hover: #74a7ff;
+  --accent-soft:  #10223d;
+  --accent-line:  #21406e;
+
+  --buy:       #2ec08d;
+  --buy-soft:  #0a2a21;
+  --buy-line:  #17453a;
+  --sell:      #ff7a5e;
+  --sell-soft: #2b1410;
+  --sell-line: #4b241c;
+
+  --st-open:          #5090ff;
+  --st-open-soft:     #10223d;
+  --st-active:        #9b7cff;
+  --st-active-soft:   #1c1636;
+  --st-attention:     #e2a33c;
+  --st-attention-soft:#2a2010;
+  --st-settled:       #2ec08d;
+  --st-settled-soft:  #0a2a21;
+  --st-closed:        #8496ad;
+  --st-closed-soft:   #151d2a;
+  --st-danger:        #ff6f63;
+  --st-danger-soft:   #2b1210;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, .55);
+  --shadow-3: 0 20px 44px rgba(0, 0, 0, .72), 0 2px 8px rgba(0, 0, 0, .5);
+
+  color-scheme: dark;
+}
+
+/* System preference, when no explicit choice has been made */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg:           #06090f;
+    --surface:      #0d131e;
+    --surface-2:    #121a28;
+    --surface-3:    #172131;
+    --surface-sunk: #090e17;
+
+    --line:        #1d2839;
+    --line-strong: #2b3a52;
+
+    --ink:     #e7edf8;
+    --ink-2:   #a1b1c8;
+    --ink-3:   #6f8199;
+    --on-accent: #04101f;
+
+    --accent:       #5090ff;
+    --accent-hover: #74a7ff;
+    --accent-soft:  #10223d;
+    --accent-line:  #21406e;
+
+    --buy:       #2ec08d;
+    --buy-soft:  #0a2a21;
+    --buy-line:  #17453a;
+    --sell:      #ff7a5e;
+    --sell-soft: #2b1410;
+    --sell-line: #4b241c;
+
+    --st-open:          #5090ff;
+    --st-open-soft:     #10223d;
+    --st-active:        #9b7cff;
+    --st-active-soft:   #1c1636;
+    --st-attention:     #e2a33c;
+    --st-attention-soft:#2a2010;
+    --st-settled:       #2ec08d;
+    --st-settled-soft:  #0a2a21;
+    --st-closed:        #8496ad;
+    --st-closed-soft:   #151d2a;
+    --st-danger:        #ff6f63;
+    --st-danger-soft:   #2b1210;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .5);
+    --shadow-2: 0 2px 8px rgba(0, 0, 0, .55);
+    --shadow-3: 0 20px 44px rgba(0, 0, 0, .72), 0 2px 8px rgba(0, 0, 0, .5);
+
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --line: #94a3b8;
+    --line-strong: #5a6779;
+    --ink-3: #46536a;
+  }
+}
