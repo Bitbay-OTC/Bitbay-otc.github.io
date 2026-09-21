@@ -1,0 +1,1155 @@
+import type { FaqCategory, FaqEntry, QuickTopic } from '../types';
+
+export const categories: FaqCategory[] = [
+  {
+    id: 'foundations',
+    label: 'Foundations',
+    blurb: 'The core claims, the summary of the model, and why it is framed as fewer assumptions.',
+    icon: 'compass',
+  },
+  {
+    id: 'horizon',
+    label: 'Horizon & Perspective',
+    blurb: 'Eye level, vanishing points, ships on the water line, and what the edge of sight really is.',
+    icon: 'eye',
+  },
+  {
+    id: 'light',
+    label: 'Light, Air & Refraction',
+    blurb: "Snell's law, air density, mirages and the optics the model leans on hardest.",
+    icon: 'sparkles',
+  },
+  {
+    id: 'sky',
+    label: 'Sun, Moon & Stars',
+    blurb: 'A local luminary, the spiral path, seasons, eclipses, star trails and parallax.',
+    icon: 'sun',
+  },
+  {
+    id: 'physics',
+    label: 'Gravity & Physics',
+    blurb: 'Buoyancy and density in place of attraction, plus relativity, Coriolis and Foucault.',
+    icon: 'scale',
+  },
+  {
+    id: 'maps',
+    label: 'Maps, Flights & Antarctica',
+    blurb: 'The azimuthal equidistant projection, the ice wall, longitude, and southern routes.',
+    icon: 'map',
+  },
+  {
+    id: 'space',
+    label: 'Space Agencies',
+    blurb: 'Photographs, the ISS, satellites, the moon missions and the rockets that fly the arc.',
+    icon: 'rocket',
+  },
+  {
+    id: 'motive',
+    label: 'Motive & Media',
+    blurb: 'Who would benefit, how a consensus is maintained, and how opinion is shaped online.',
+    icon: 'radio',
+  },
+];
+
+export const quickTopics: QuickTopic[] = [
+  {
+    faqId: 'horizon-eye-level',
+    title: 'The Horizon & Eye Level',
+    teaser: 'Why the horizon keeps rising to meet you, no matter how high you climb.',
+    icon: 'eye',
+    accent: 'glow',
+  },
+  {
+    faqId: 'water-finds-its-level',
+    title: 'Water Finds Its Level',
+    teaser: 'Still water settles flat in every test we can run. Scale that up to an ocean.',
+    icon: 'waves',
+    accent: 'glow',
+  },
+  {
+    faqId: 'sun-path-seasons',
+    title: "The Sun's Spiral Path",
+    teaser: 'One local, circling luminary producing seasons and the midnight sun.',
+    icon: 'sun',
+    accent: 'gold',
+  },
+  {
+    faqId: 'ice-wall',
+    title: 'The Antarctic Ice Wall',
+    teaser: 'What the model says sits at the rim, and why nobody is flying over it.',
+    icon: 'map',
+    accent: 'glow',
+  },
+  {
+    faqId: 'eclipses',
+    title: 'Eclipses & Moon Phases',
+    teaser: 'Occlusion by a local body, with no spherical shadow required.',
+    icon: 'orbit',
+    accent: 'gold',
+  },
+];
+
+const foundationsFaqs: FaqEntry[] = [
+  // ─────────────────────────────  FOUNDATIONS  ─────────────────────────────
+  {
+    id: 'greatest-proofs',
+    category: 'foundations',
+    question: 'What are the greatest proofs of a flat earth?',
+    summary:
+      'Long-distance observations that should be hidden by 8 inches per mile squared, and high-altitude footage showing no curve.',
+    keyPoints: [
+      'Curvature on a globe works out to roughly 8 inches per mile squared — about a 150 foot drop at 15 miles.',
+      'Boats, islands, lighthouses and skylines are routinely photographed well past that limit.',
+      'Independent balloon footage shot without a fisheye lens shows a flat horizon at 20+ miles altitude.',
+      'Adjacent islands and mountain ranges show no left-to-right bow, which refraction does not explain.',
+    ],
+    answer: [
+      'If the earth were a ball, curvature can be approximated at 8 inches per mile squared. At 15 miles away that is a 150 foot drop, which would easily hide islands, boats, lighthouses and whole cities. That is not what observers report. On a clear day people regularly resolve targets 50 miles out and further, distances that should put thousands of feet of bulge in the way.',
+      'The familiar claim that ships "disappear over the water line" has other causes. Over water there is heavy refraction and extremely dense, vapour-laden air that can cut off the bottoms of buildings and hulls. That same air produces inferior mirage, Fata Morgana and superior mirage, bending light up or down depending on whether it is moving into a denser or thinner medium. Temperature drives the same effect. Enough accumulated air simply blocks a distant object, the way a thousand sheets of glass would, or the way fog stops you seeing a few feet down the road.',
+      'Yet things are still seen at extreme range. Corsica is observed from distances that would put more than a mile of curvature in between. There are far too many of these sightings to wave away individually.',
+      'Independent high-altitude balloon footage, shot without a fisheye lens, shows no sign of curvature even above 20 miles. Add the lack of any observable spin, the longitude and distance problems across the southern hemisphere, and the experiments that failed to detect curvature at all.',
+      "Perhaps the strongest single case is the missing horizontal bow. Adjacent islands and mountain ranges photographed across hundreds of miles show a flat line, and refraction does not account for a missing left-to-right curve. Shipping journals add to this: Captain Cook and others logged circumnavigations over the south of tremendous length, implying a much larger southern circumference than a globe allows.",
+      'It should be said plainly: the movement is about testing the globe model and offering a better one in its place. It is a search for truth using experiment, and it is a model of fewer assumptions.',
+    ],
+    tags: ['curvature', '8 inches per mile', 'corsica', 'balloon', 'captain cook', 'evidence'],
+  },
+  {
+    id: 'fewer-assumptions',
+    category: 'foundations',
+    question: 'What makes fewer assumptions?',
+    summary:
+      'The flat model asks you to accept what you measure. The globe asks you to accept a long chain of unobservables.',
+    answer: [
+      'A flat earth. It is what we see, what we measure, and what the reproducible experiments point to. Where something is still unexplained, the answer is to keep researching rather than to invent a mechanism.',
+      'The globe asks you to accept a great deal at once: that we are moving through space at enormous speed but cannot feel it; that the atmosphere is carried along in perfect synchronicity with no detectable effect on weather; that the sun is a million miles across and warms us from ninety-odd million miles away; that the galaxy is flat; that space itself bends, which would have to happen in three dimensions at once.',
+      'How do clouds at high altitude keep pace with clouds at low altitude on a spinning ball? Why is the moon almost exactly the same apparent diameter as the sun? When a prediction fails it is patched rather than dropped. The moon is not pulled away by the sun because it is closer to the earth. Light takes eight minutes to reach us, but the photon experiences no time.',
+      'The flat model starts from results of experiments anyone can run. Some things in it are open questions, and the honest answer there is that the scientific method is still being applied to them.',
+    ],
+    tags: ['occams razor', 'assumptions', 'scientism', 'model'],
+  },
+  {
+    id: 'summary',
+    category: 'foundations',
+    question: 'Is there a summary of this theory?',
+    summary: 'The whole model in one place: a flat plane, a local sun and moon, an atmospheric lens, and an icy rim.',
+    answer: [
+      'The earth is observably a flat plane. It is surrounded by ice, and beyond that is not known. The sun, moon and stars rotate around us.',
+      'The sun and moon are usually not visible beyond about 10,000 kilometres at sea level. Their light is refracted, magnified and bent both toward and away from the observer depending on the layer of atmosphere, and potentially on a dome. Those effects, combined with optics and perspective, produce sunset. Perspective causes things to converge toward the horizon as they descend and recede.',
+      'If a dome exists, its composition is unknown; ice or earthen material would explain comets. The alternative is that light is simply bent and magnified by an atmospheric density gradient. Holographic and optical elements may also be at play.',
+      'The sun and moon keep similar sizes to one another and both travel a spiral path. The stars are visible up to a limit, then intersect too much air; they circle east to west in a dome-like pattern. Stellar parallax is not observed, and attempts to measure it are defeated by refraction.',
+      'Moon phases could come from a lens effect, a holographic effect, the portion of the sun’s light received, or a second semi-translucent disc. Double convex lenses and domes reproduce surprising star patterns, eclipses and long southern daylight. Eclipses are caused by an unknown obstruction or lens effect, and the sun and moon may be involved in obscuring each other.',
+      'The spiral of these rotations causes the seasons. Heat exchange in the water drives tides, which the magnetic field may also influence. Magnetic north may be accompanied by a southern ring magnet. Magnetism ionises air to produce the aurora and may bend light as well.',
+      'You can circle the earth because the north pole is at the centre and a compass always points to it. Electromagnetism and electrostatics may produce the downward force attributed to gravity, which is otherwise governed by density, buoyancy and pressure.',
+      'Things are cut off from the bottom at the horizon because of refraction, magnification and compounded air. Mirages are the evidence; advanced sunrise and delayed sunset are the evidence for the sun’s light bending.',
+      'The azimuthal equidistant map is better proportioned than the alternatives and is used constantly as a practical tool. Better maps are possible once the globe and magnetic-drift assumptions are removed and the lines are redrawn.',
+      'All of it can be turned into an open-source computer model simulating refraction, magnification, atmospheric density and electromagnetism — one that follows the same scientific principles and matches what we actually observe.',
+    ],
+    tags: ['summary', 'model', 'overview', 'dome', 'cosmology'],
+  },
+  {
+    id: 'experiments',
+    category: 'foundations',
+    question: 'Does flat earth have scientific experiments? Don’t experiments favour a round earth?',
+    summary:
+      'The model points to laser tests, curvature surveys and two historical null results: Michelson–Morley and Airy’s failure.',
+    answer: [
+      'Round earth has surprisingly few experiments an individual can repeat. There is no open-source orbital gravity simulator that holds together. Most of its headline results come from organisations, usually government-run or funded through approved grants, and cannot be independently verified without access to billions of dollars.',
+      'Flat earth research runs laser tests over water, curvature tests, computer models, long survey lines and light experiments. It uses logical argument, reviews thousands of hours of footage, and checks the claims of companies and airlines.',
+      'The Michelson–Morley experiment split light off mirrors and failed to detect the motion of the earth; its speed was unaffected whichever direction it was reflected. Airy’s failure filled a telescope with water expecting starlight to slow and miss centre as the instrument’s angle changed with the earth’s motion. He called it a failure because he could not demonstrate the spin. Read the other way, it succeeded.',
+      'Stick and shadow is instructive on error bars alone. Under globe assumptions the sun’s distance comes out anywhere from one million to over a hundred million miles. Under flat assumptions the range is 500 to 4,000 miles. One of those is a measurement; the other is a spread.',
+    ],
+    tags: ['michelson morley', 'airy', 'laser', 'experiment', 'null result'],
+  },
+  {
+    id: 'history',
+    category: 'foundations',
+    question: 'Doesn’t history show the earth is round?',
+    summary: 'Every ancient culture described a flat plane. The globe is a comparatively recent consensus.',
+    answer: [
+      'History shows the opposite. Vedic cosmology, the Bible, Islamic, Egyptian, Mayan, Aztec, Incan, American Indian, Chinese, Japanese, Indian and African traditions all describe a flat earth under a covering. There is not a single old culture that taught a ball.',
+      'Galileo had no telephone to call China with his theory. Most of the world did not adopt the globe until the era of national space agencies, and even then it was resisted by Rowbotham and others until radio, television and the moon programme settled popular opinion.',
+      'Controlled opposition muddies the water today. The Flat Earth Society promoted "universal acceleration", the idea that the plane is accelerating upward to imitate gravity, which makes the whole subject look absurd and discourages new readers. Their forums stay full of argument and insult, which does the same job.',
+    ],
+    tags: ['history', 'ancient', 'rowbotham', 'controlled opposition'],
+  },
+  {
+    id: 'dismissing-evidence',
+    category: 'foundations',
+    question: 'If flat earthers dismiss NASA photos, why can’t someone dismiss flat earth videos?',
+    summary: 'Because the flat earth claims are things you can go outside and test yourself.',
+    answer: [
+      'There are hundreds of experiments you can run without permission or funding. Take a telescope to a beach and find out how far you can actually see. Send a balloon into the upper atmosphere and look at the horizon. Run refraction tests at home with water, sugar and a laser pointer.',
+      'Videos carry a lot of content, and researching the subject means hearing every side of it. Science is about questioning established knowledge. The moment an idea can no longer be questioned, it has become a religion.',
+    ],
+    tags: ['verification', 'reproducible', 'nasa'],
+  },
+];
+
+// ──────────────────────  HORIZON & PERSPECTIVE  ──────────────────────
+const horizonFaqs: FaqEntry[] = [
+  {
+    id: 'horizon-eye-level',
+    category: 'horizon',
+    question: 'Why does the horizon always rise to eye level?',
+    summary:
+      'Climb to any altitude and the horizon comes up to meet you. On a ball you would have to look further and further down.',
+    diagram: 'horizon',
+    keyPoints: [
+      'On a sphere, the horizon drops below eye level by a dip angle that grows with altitude.',
+      'At 20 miles up that dip should be roughly 5.7 degrees, which is plainly visible against a level reference.',
+      'Non-fisheye balloon footage instead shows the horizon sitting flat, at the level of the lens.',
+      'A curved or double-paned aircraft window bends the view, which is what most "I saw the curve" reports amount to.',
+    ],
+    answer: [
+      'You cannot see the curve from a plane. People who think they have usually did not notice that sitting over the wing puts a slightly curved fuselage and a curved or double-paned window in the frame. Cloud and weather patterns can change the apparent shape of the line as well.',
+      'Balloons reach 20 miles and see no curvature. In fact the horizon is one of the better arguments for a plane, because as you gain altitude it rises to your eye level and stays there.',
+      'On a ball that is not possible at any size. The sphere falls away beneath you, so the true horizon sits below the horizontal by a dip angle that grows with height. By 20 miles up you would be looking down at it noticeably, and it would read as a distinct drop against any level reference in the shot. Computer models of the geometry make the expected dip obvious.',
+      'What observers get instead is a line that stays level and stays flat from edge to edge. The flat model explains it directly: you are looking out across a plane until accumulated air and the limits of the lens end the view.',
+    ],
+    tags: ['eye level', 'dip angle', 'altitude', 'balloon', 'aircraft window', 'curve'],
+  },
+  {
+    id: 'water-finds-its-level',
+    category: 'horizon',
+    question: 'Water finds its level — how does that apply to the oceans?',
+    summary:
+      'Still water settles to a flat, level surface in every test we can perform. The model takes that result at face value at ocean scale.',
+    diagram: 'water',
+    keyPoints: [
+      'Undisturbed water settles level. That is the property every builder, surveyor and machinist relies on.',
+      'A water level and a laser over a long canal show a straight line, not a dropping arc.',
+      'Surveyors plan railways, canals and bridges on flat-plane mathematics and do not subtract curvature.',
+      'A 100-mile bridge in China runs straight; on a ball it would need to dip many feet, not millimetres.',
+    ],
+    answer: [
+      'Level is what still water does. Pour it into any container and the surface settles flat and perpendicular to the downward force. This is not a fringe claim: it is the working principle behind the water level, the spirit level and every foundation ever poured.',
+      'The globe asks you to accept that the same substance holds a convex shape across thousands of miles of open ocean, curving away at about 8 inches per mile squared, with nothing containing it. The flat model simply declines to make that exception and treats the ocean the way it treats a lake, a canal and a bathtub.',
+      'The practical record backs it up. Surveyors testify that land is surveyed on flat-plane mathematics and that no curvature allowance is entered. Railways are laid without subtracting a drop. A bridge in Veracruz was said to have been adjusted for curvature by millimetres, but millimetres are not a meaningful correction on any bridge, and a genuine curvature allowance would be many feet. A bridge in China runs 100 miles and is straight.',
+      'Laser tests over long canals and reservoirs are the cleanest version of the experiment, because the target and the source are both near the water and the geometry is easy to check. Run the beam far enough and the drop that should be there is not.',
+    ],
+    tags: ['water level', 'canal', 'laser', 'surveyor', 'bridge', 'bedford'],
+  },
+  {
+    id: 'ships-horizon',
+    category: 'horizon',
+    question: 'How do ships disappear over the horizon?',
+    summary:
+      'Compounded vapour, wave swell and an inferior mirage lifting the water line. Zoom back in and the hull usually returns.',
+    answer: [
+      'First, the atmosphere magnifies the horizon. Heavy, water-vapour-laden air sinks to the ocean surface, and after enough miles it reads as indistinguishable from the water itself. Anyone who has driven through fog knows that a few feet of it can end visibility. Now picture ten miles of it lying on the sea.',
+      'If you zoom in on a ship that has "gone over", you can usually bring it back. Wave swell does its own part, since the water line changes shape and produces prolonged dips that hide and reveal a hull.',
+      'Then there is refraction. It is why a distant boat sometimes appears to float above its own reflection, and why at extreme range a vessel looks wrapped in mist. The same applies to city skylines, where the water line always sits slightly higher than it should; you can see the change in colour at the horizon where the air gradient begins.',
+      'An inferior mirage displaces something below into a position above, and water over an ocean routinely produces one, lifting the apparent water line. Dense vapour settles at the surface, so light near the water bends upward. People read that lifted line as curvature. Inferior mirages are far more common than superior ones.',
+      'The amounts needed are tiny. To cut off 50 feet of a building at 40 miles, the water line only has to refract by roughly 0.013 degrees. That is a far humbler proposition than an entire city curving over a bulge. Time-lapse of a horizon shows the water line itself moving, which is exactly what this predicts.',
+    ],
+    tags: ['ships', 'hull down', 'mirage', 'vapour', 'zoom', 'water line'],
+  },
+  {
+    id: 'vanishing-point',
+    category: 'horizon',
+    question: 'What is the vanishing point?',
+    summary: 'The point just above the horizon where accumulated air and converging perspective end the view.',
+    answer: [
+      'The vanishing point sits slightly above the horizon, and things tend to disappear beyond it. The main cause is air density, though some argue that perspective lines converge and then diverge.',
+      'Either way, as objects recede they get smaller and appear lower even when they hold the same altitude. Look along your ceiling and watch it converge toward the same line the floor does.',
+      'Perspective is taught in art class. Projective geometry, which formalises it, used to be taught in schools and is beautiful for learning to reason in three dimensions. It has largely dropped out of the curriculum below doctoral level.',
+    ],
+    tags: ['perspective', 'vanishing point', 'projective geometry', 'convergence'],
+  },
+  {
+    id: 'lens-limits',
+    category: 'horizon',
+    question: 'Can anything else make things disappear at the horizon?',
+    summary: 'Every eye and every camera has a curved lens, and every beam of light has a range limit.',
+    answer: [
+      'Your eye and every camera use a curved lens. Look at fisheye footage of a horizon and watch distant objects bow dramatically. It is reasonable to expect that at some range a lens makes things converge toward a centre point and lose visibility, which puts a ceiling on viewing distance.',
+      'Light also has a range. After sunset the sky stays lit for a long while. In deep ocean, light penetrates only a few metres. How far light can illuminate something is a separate question from whether you can see the source: an area can be lit without the source being visible.',
+    ],
+    tags: ['lens', 'fisheye', 'visibility', 'optics'],
+  },
+  {
+    id: 'superior-mirages',
+    category: 'horizon',
+    question: 'What about superior mirages?',
+    summary:
+      'They are real, but they are wavy, inverted and cold-weather bound. The long-range skyline footage does not look like one.',
+    answer: [
+      'The standard rescue is that air bends light back to you around the bulge, revealing things that sit below a "ball horizon". The problems show immediately. Horizontally we see hundreds of miles of horizon between adjacent islands and mountain ranges with no bow at all, and refraction does not produce a missing sideways curve.',
+      'Mirages are normally wavy. Watch a boat travel out and you can see the little water fractals form at the line. A superior mirage is usually stable only in very cold regions, where there is less hot air disturbing it, and it is usually inverted, because like the lens in your eye it flips the image. Mirages are common over lakes, deserts and hot roads because of heat, vapour and inversion layers.',
+      'The famous case is the Chicago skyline seen across Lake Michigan from about 50 miles, which should be thousands of feet below the line of sight. News coverage called a single still a mirage, but there is video: the air is thick, then it clears away and reveals the city. No waviness, no inversion. Rob Skiba filmed the same skyline from a boat 40 miles out and caught the foggy layer at the base of the buildings while the whole skyline stayed visible.',
+      'The bottom of the city was slightly cut off in that 40-mile shot, which atmospheric magnification and sub-degree refraction account for on their own. A colour gradient is usually visible right at the water line.',
+      'For a cleaner test, go where there is less to refract. From the Bolivian salt flats you can see 50+ miles: high altitude, lower air density, fewer mirages, excellent visibility, and no curve. Once you stop assuming a bulge, mirage behaviour changes completely — superior mirages tend to curve down into the horizon rather than follow a curve — so the honest approach is to stick to Snell’s law, which is measurable. Time-lapse such as the Skunk Bay weather footage shows the water line itself refracting upward rather than the cities moving.',
+    ],
+    tags: ['superior mirage', 'chicago', 'lake michigan', 'salt flats', 'fata morgana', 'skunk bay'],
+  },
+  {
+    id: 'crepuscular-rays',
+    category: 'horizon',
+    question: 'What are crepuscular rays?',
+    summary: 'Rays that converge back to a point, which is what a nearby light source does and a distant one does not.',
+    answer: [
+      'Crepuscular rays trace back to the sun. If the source were 92 million miles away, the rays would arrive effectively parallel. Instead they fan at angles that triangulate back to a point in the sky, which is the signature of a close source.',
+      'Run it yourself. Punch holes in cardboard, put a lamp close behind it, and blow some smoke underneath to see the beams. Trace them. Now move the lamp far back and watch the angles change.',
+      'We also see hot spots where the sun sits over the clouds. A localised sunspot on a cloud deck is not what a body a million miles across and a hundred million miles away should produce, and if it were that large and that far, why are the hot spots always small?',
+    ],
+    tags: ['crepuscular', 'rays', 'sun distance', 'hot spot', 'anticrepuscular'],
+  },
+];
+
+// ──────────────────────  LIGHT, AIR & REFRACTION  ──────────────────────
+const lightFaqs: FaqEntry[] = [
+  {
+    id: 'sunset',
+    category: 'light',
+    question: 'How does the sun set on a flat earth?',
+    summary:
+      'Perspective lowers it, a thick wall of upper air cuts it off from the bottom, and refraction bends the last of its light toward you.',
+    answer: [
+      'The atmosphere is full of water and of things that magnify light. Over many miles the horizon is magnified, and simple tests at home that simulate an atmosphere can reproduce a sunset in a tank. A magnified horizon makes objects appear to drop below the line.',
+      'Most arguments against this ignore refraction and air density outright. As things recede they appear smaller and they descend toward the horizon. But the horizon we actually see is significantly higher than the true one, because air is not transparent.',
+      'Watching a sunset means looking through thousands of miles of low, middle and high altitude air. The upper air is thinner — that is why clouds float, why helium balloons rise and why boats float, all buoyancy and density. Past a hundred miles or so that thin upper atmosphere forms a wall that blocks the view of the sun and cuts it off from the bottom first. The colour shifts gradually and the scene darkens well before the sun is gone.',
+      'Light also curves toward you as it refracts in the upper atmosphere. The proof is in advanced sunrise and delayed sunset: the sun has been seen to set, rise again an hour later, and set once more. Wikipedia itself documents the advanced sunrise case. Light bends up in the upper atmosphere and down in the lower one, by Snell’s law.',
+      'The limits of the eye, curved lenses and perspective finish the job. Things below you converge to the horizon and things above you converge to it as well; a curved lens on your eye or camera does something similar. And after the sun goes down there is still light for a good part of the evening, so whether the sun is visible and whether its light reaches you are two separate questions.',
+    ],
+    tags: ['sunset', 'perspective', 'refraction', 'advanced sunrise', 'delayed sunset', 'air density'],
+  },
+  {
+    id: 'snells-law',
+    category: 'light',
+    question: 'What is Snell’s law?',
+    summary:
+      'The rule for how light bends between media, and the backbone of nearly every optical claim in this model.',
+    keyPoints: [
+      'Low refraction into high refraction bends light downward; high into low bends it upward.',
+      'The atmosphere is a density gradient, so light is bending continuously all the way up.',
+      'Every element has a refractive index, so tiny angular changes accumulate over long distances.',
+    ],
+    answer: [
+      'Snell’s law is the method for calculating refraction. Going from a low-refraction medium to a high-refraction one angles light down; going the other way angles it up. Either way the angle of the light changes.',
+      'This is also what undermines very distant stars. Over quintillions of miles, the probability that light accumulates even a 0.0000001 degree change and misses us entirely is overwhelming, which would make consistent star trails impossible.',
+      'Our atmosphere forms a density gradient. Buoyant things rise: clouds, balloons, helium, hydrogen, with hydrogen above helium. So light crossing from hydrogen into helium bends toward you. Every element has a refractive index, so light changes slightly everywhere it travels, and over many miles those angular changes become significant.',
+      'Combining substances exaggerates the effect. Dissolve sugar into water and you can watch a laser pointer bend through the gradient. Add diffusion, reflection and the rest of what happens to light in air, and there is a great deal here worth studying properly.',
+    ],
+    tags: ['snells law', 'refraction', 'gradient', 'laser', 'sugar water', 'index'],
+  },
+  {
+    id: 'buoyancy',
+    category: 'light',
+    question: 'What is buoyancy, and how does temperature affect density?',
+    summary: 'Hot expands and rises, cold contracts and sinks. Density sets both fall rate and how strongly light bends.',
+    answer: [
+      'Buoyancy and air density do much of the work attributed to gravity. Things fall slowly in water, faster in air, and fastest in a vacuum chamber. Anything less dense than its surroundings rises, which is why balloons go up.',
+      'Temperature changes density. Heat something and its molecules expand; cool it and they contract. That means hot media refract less and cold media refract more, and it is why a hot air balloon lifts.',
+      'The same principle floats clouds, floats boats, and can hold a balloon hovering in mid-air at the level where its density matches the air around it.',
+    ],
+    tags: ['buoyancy', 'density', 'temperature', 'balloon', 'falling'],
+  },
+  {
+    id: 'stick-and-shadow',
+    category: 'light',
+    question: 'What is stick and shadow?',
+    summary:
+      'The ancient shadow-angle experiment. Refraction changes shadow length, which makes it useless for fixing the sun’s height.',
+    answer: [
+      'Stick and shadow was the original proof of a ball thousands of years ago, and it was rejected at the time. When light casts a shadow you can measure its angle, and from two locations you can triangulate the height of the source.',
+      'Eratosthenes found the results fluctuated too much and concluded he must be on a ball, which would explain longer shadows toward sunset.',
+      'But because light refracts, shadow length is seriously affected by changes in the angle of incoming light. That makes the experiment useless for determining the sun’s height. It also means the sun is lower than many flat earthers assumed in the past, possibly under 1,000 miles. Its true height cannot be recovered this way.',
+    ],
+    tags: ['eratosthenes', 'shadow', 'stick', 'sun height', 'triangulation'],
+  },
+  {
+    id: 'sun-distance',
+    category: 'light',
+    question: 'So the sun cannot be 92 million miles away? I thought Eratosthenes proved that.',
+    summary: 'Redo the same shadow maths without assuming a curve and the sun lands a few thousand miles up.',
+    answer: [
+      'It is worth noting the irony: globe defenders accuse flat earthers of clinging to thousand-year-old theories, then cite Galileo, Newton and Eratosthenes, who was almost two thousand years ago. Any experiment needs reproducing under modern conditions to count.',
+      'The shadow experiment for solar distance was done with a curve already assumed. Run the same arithmetic assuming a flat plane and the sun comes out somewhere between 500 and 4,000 miles away, depending on where you measure. Run it under globe assumptions and results range from one million to a hundred million miles, with many measurements thrown out because the shadow points too far away. The margin for error is enormous.',
+      'The real problem remains refraction. Light bends, and bending changes shadow length; recent experiments with light through water show refraction completely changing a shadow. Knowing the sun’s altitude this way would require knowing the full atmospheric gradient, its effect on light at every altitude, the angles and method of projection of the source, the shape of its lens, whether it is rising or falling in altitude, and its path across the sky. Lab-scale results do not transfer cleanly to thousands of miles.',
+    ],
+    tags: ['sun distance', 'eratosthenes', 'shadow', 'error margin'],
+  },
+  {
+    id: 'far-away-sights',
+    category: 'light',
+    question: 'Why can’t I see New York from England, or northern stars from the south?',
+    summary: 'Because air is not transparent, and every mile of it blocks, bends, magnifies and scatters light.',
+    answer: [
+      'Because there is too much air in the way, full of elements and water that block, refract, magnify, diffuse and reflect light. It is remarkable how often that gets forgotten. Bill Nye and Carl Sagan have both used this line to debunk a flat earth, which says something about how carefully it was thought through.',
+      'How many stars you can see depends on the clarity of the sky and on refraction. The further a star, the more air its light crosses and the more it bends. The lower it sits in the sky, the longer that path is, so of course there are stars you will not see from a distant latitude.',
+      'The flat model puts the stars much closer. Whether stars can be seen above the atmosphere is genuinely disputed; light-sensitive cameras have gone up on balloons without capturing much of use. The round-earth answer is to cite agency pictures, which is the pattern for most of that belief structure.',
+    ],
+    tags: ['visibility', 'air', 'stars', 'distance', 'bill nye'],
+  },
+];
+
+// ──────────────────────  SUN, MOON & STARS  ──────────────────────
+const skyFaqs: FaqEntry[] = [
+  {
+    id: 'sun-path-seasons',
+    category: 'sky',
+    question: 'How does a local sun create seasons and the midnight sun?',
+    summary:
+      'The sun spirals: a tight circle near the centre in northern summer, a wide one in winter. Its distance sets your daylight and your heat.',
+    diagram: 'sun',
+    keyPoints: [
+      'The sun circles above the plane once a day, spiralling between a tight inner ring and a wide outer one.',
+      'On the inner ring it never leaves the arctic sky, which is the midnight sun.',
+      'Heat is local: the closer the sun tracks to you, the warmer and longer your day.',
+      'No axial tilt is required, and the equatorial band stays at a consistent average temperature.',
+    ],
+    answer: [
+      'The sun does not just circle us, it spirals. You can measure this by tracking its path and where it rises through the year: the circle is tighter in one season and further south in the next.',
+      'The sun only heats what is near it. Put your hand near a bulb and it burns; move the bulb away and you feel less heat and see less light, and more intervening air makes it darker still. Day and night work without difficulty on a plane, and so does temperature.',
+      'The equator is easy here. The plane does not tilt; the sun simply rotates above it, so the band it spends the most time over holds a consistent average temperature. On a globe the equator is harder to defend — if axial tilt swings the planet toward and away from the sun every six months, why are equatorial countries always the same temperature, while the south pole sits at -100 or worse year round?',
+      'The elliptical-orbit claim has the same problem. If small changes in the angle of incoming light drive seasonal temperature, a large change in distance from the sun should overwhelm them. A close, local sun heating the ground beneath it is a much simpler account than a body a million miles across warming us from a hundred million miles away at exactly the intensity life requires.',
+      'The midnight sun follows directly. When the spiral brings the sun to its tightest circle it stays above the arctic horizon around the clock. Watch a 24-hour arctic time-lapse: the sun goes a full 360 degrees around the observer. Nothing equivalent is documented at the south pole, and the one clip offered was quickly picked apart. Footage of the sun in the far south instead shows it swinging inward along its path, which is what the spiral predicts, and the sun is never seen south of the south pole.',
+    ],
+    tags: ['seasons', 'spiral', 'midnight sun', 'arctic', 'equator', 'tilt', 'daylight'],
+  },
+  {
+    id: 'eclipses',
+    category: 'sky',
+    question: 'How do eclipses work without a spherical shadow?',
+    summary:
+      'Local occlusion. Something passes in front — and lunar eclipses have been filmed with sun and moon both above the horizon.',
+    diagram: 'eclipse',
+    keyPoints: [
+      'A selenelion — sun and moon both visible during a lunar eclipse — has been filmed and reported.',
+      'If the earth cast the shadow, the three bodies would have to be in a straight line, which rules that out.',
+      'Ancient traditions named a dark, unseen body: Rahu.',
+      'Double convex lens and dome experiments reproduce eclipse-like occlusion without any sphere.',
+    ],
+    answer: [
+      'A lunar eclipse has been observed with both the sun and the moon above the horizon. There is footage of exactly this, with news presenters visibly confused by it. If the earth truly cast the shadow, the three bodies would have to align in a straight line — and if the sun and moon are both up, they are plainly not aligned.',
+      'Other objects have been recorded in the sky: strange dark, semi-translucent discs. Older societies named such a body Rahu. There is a lot of footage of these discs online, and the argument is that when one intersects the moon it produces the eclipse. Similar reasoning applies to the phases.',
+      'The same dark discs are reported around the sun during solar eclipses, and a solar eclipse does not much look like the moon crossing in front of the sun to begin with.',
+      'There is a reason you are told never to look at an eclipse. A dilated eye pointed at the sun can certainly be harmed; the official account is that dangerous frequencies still reach you even when the sun is easy to look at. Either way it discourages close study. What remains is that the eclipse cannot be the earth’s shadow when both bodies are above the horizon at once. The sun and moon may well have some relationship to each other in eclipses.',
+      'Experiments using double convex lenses and dome geometry have reproduced eclipse-like occlusion, southern star trails, a celestial south pole and long southern daylight, all without a sphere anywhere in the setup.',
+    ],
+    tags: ['eclipse', 'selenelion', 'rahu', 'occlusion', 'lunar', 'solar', 'shadow'],
+  },
+  {
+    id: 'moon-phases',
+    category: 'sky',
+    question: 'Doesn’t the moon reflect light? What causes its phases?',
+    summary:
+      'Phases are attributed to a lens effect, a second translucent body, or how much of the sun’s light the moon receives.',
+    answer: [
+      'The moon always shows the same face, which the globe model calls a coincidence of rotation rate. In the flat model the moon circles daily, running faster circles than the sun and producing a 28-day cycle. Lunar calendars were once widespread and divide the year far more evenly.',
+      'The standard explanation of phases is the lit portion seen as the moon orbits monthly. That runs into trouble, because the phases should reverse six months later when the earth is on the other side of the sun.',
+      'Alternatives within the flat model: the phases could come from the shape of the moon’s lens combined with a slightly spiral path cutting the angles; from how the light is projected and mirrored if holography is involved; or from a second translucent disc slowly covering and uncovering it. Videos of third "suns" and similar anomalies give that last idea some weight. Some argue the moon’s offset circuit means it only receives certain portions of the sun’s light and reflects those.',
+      'Try finding good footage of the moon setting. Notice how rare it is, and how many anomalies show up when you do. In the "NASA throws in the trowel" footage by Jeranism you can see the moon above the clouds appearing as a dot, then turning and illuminating after it moves. High-altitude footage generally does not show the large moon we see from the ground.',
+    ],
+    tags: ['moon phases', 'lunar', 'tidal lock', 'translucent disc', 'jeranism'],
+  },
+  {
+    id: 'what-is-the-moon',
+    category: 'sky',
+    question: 'What is the moon?',
+    summary: 'An open question. Its light behaves differently from sunlight, and stars have been photographed through it.',
+    answer: [
+      'Nobody knows. The moon appears to be a translucent light source, or a projection, or a reflection. Its light has completely different qualities from sunlight, which you can test at home. Many people have photographed and filmed stars visible through it.',
+      'There is a reason for the word "lunatic": study the moon long enough and it will drive you a little mad.',
+      'On why only one face is ever shown: since light refracts toward you, the moon’s light plausibly bends toward you too. If the upper atmosphere is layered with hydrogen and helium, more exotic species such as helium hydride or liquid helium may form depending on temperature. The atmosphere is layered like a lens, each element refracting differently.',
+      'If the moon is a light, then depending on the shape of its lens its diameter could grow slightly with distance, keeping the apparent size roughly constant the way a projector does. Roughly, but not always — the famous moon illusion shows it appearing enormous, which could be an exception in refraction, in projection, or a function of distance from the horizon line.',
+      'It could equally be a reflection off the top of a dome, a holographic projection, or a lumographic lens that changes with viewing angle. Three-dimensional holograms use interference patterns and change with angle; Pepper’s ghost cylinders are sold as toys that float an object above a table. Atmosphere can magnify light much like magnifying film. A reflection or bent light would also explain why the moon blends into the blue sky during the day.',
+      'The moon remains a serious object of study, and the model would welcome bench experiments simulating it with density gradients and projections.',
+    ],
+    tags: ['moon', 'hologram', 'translucent', 'moon illusion', 'peppers ghost'],
+  },
+  {
+    id: 'sun-goes-around-us',
+    category: 'sky',
+    question: 'Is there proof that the sun goes around us?',
+    summary:
+      'Its light shrinks around it at the horizon, which is spotlight behaviour, and it curves differently north and south of the equator.',
+    answer: [
+      'Watch a sunset from a high-altitude flight where the air is thinner. Observers report the sun’s diameter shrinking as it recedes. Welding masks and solar filters are used to show this is not camera glare, and that the disc genuinely changes size over 24 hours. Some filtered footage shows the opposite, and it is not always clear which is propaganda.',
+      'Refraction, magnification and projection can keep the diameter from changing as much as you would expect, and the same applies to the moon. More atmosphere means more refraction and more magnification. Time-lapse without a filter does show dramatic change, which some attribute to lens flare. From a high, dry mountain over a desert the sun can be seen to shrink markedly. A solar filter cannot stop light being magnified; it only cuts brightness and flare.',
+      'There are firmer proofs. Above the equator the sun curves around you; below it, it curves in toward you. The sun shines for 24 hours straight in the arctic summer and nothing equivalent is documented in the south.',
+      'On a globe the sun’s diameter should dilate at sunset; instead the reverse is seen. And its light is seen to shrink around it at the horizon, which is spotlight behaviour. Straight rays from a distant source would light the horizon evenly. If the sun were a million miles across, its light would wrap and refract into the dark side, especially at the equator.',
+      'That everything is so finely balanced does suggest design. When you look at a computer you assume a designer; when you look at a car you assume a designer. The sun and moon sharing an apparent diameter is the kind of coincidence that is hard to shrug off.',
+    ],
+    tags: ['sun', 'spotlight', 'diameter', 'solar filter', 'geocentric'],
+  },
+  {
+    id: 'geocentric',
+    category: 'sky',
+    question: 'So does the earth go around the sun?',
+    summary: 'No. The model is geocentric: the sun, moon and stars circle us, and the sun spirals to make the seasons.',
+    answer: [
+      'No. The flat earth system is geocentric. The stars, sun and moon go around us. This is not a religious position, it is a cosmology.',
+      'There are no planets in this system. The stars are not suns but lights of unknown nature, and the moon is a light source rather than a place to land.',
+      'The sun circles in a spiral, producing the seasons and an average temperature around the equator. How far you are from the equator sets the sun’s elevation angle and the length of your day. The sun is a spotlight, and enough air eventually blocks it.',
+      'The sun and moon almost always set roughly 10,000 kilometres away, with exceptions in advanced sunrise and delayed sunset. You can check those distances on suncalc.org, running from a 90 degree elevation directly beneath the sun to zero degrees away from it.',
+    ],
+    tags: ['geocentric', 'spiral', 'suncalc', 'cosmology'],
+  },
+  {
+    id: 'stars-rotate',
+    category: 'sky',
+    question: 'So the stars go around us?',
+    summary: 'Star trails circle a centre, patterns reverse north to south, and Polaris is visible at angles a globe should forbid.',
+    answer: [
+      'Yes, and time-lapse star trails show it. Polaris is seen at angles that should be impossible on a ball unless you are near the north pole. In most places the trails do not follow the pattern a spinning sphere would draw.',
+      'Star patterns are reversed between north and south. That shows they are not as far away as astronomers claim, because you would be viewing them from opposite angles, exactly like walking north and then south of a pattern on your ceiling.',
+      'Trails have been filmed spinning over Polaris with other stars streaking straight past alongside, which does not match a sphere’s geometry.',
+      'Stars get lower in the sky because they are moving further away. Eventually they curve out of view through refraction and are blocked by accumulated air.',
+    ],
+    tags: ['star trails', 'polaris', 'rotation', 'patterns'],
+  },
+  {
+    id: 'star-rotation-direction',
+    category: 'sky',
+    question: 'Why do stars rotate clockwise around Polaris and the other way in the south?',
+    summary: 'Look at the top of a dome and it turns one way; look at its rim and it turns the other. Same rotation, two viewpoints.',
+    answer: [
+      'This is simpler than the argument around it suggests. Watch a car drive away from you: the driver-side wheel turns one way and the passenger-side wheel the other. Get underneath and both reverse.',
+      'A dome does the same. Look at the top of a lid and rotate it counter-clockwise, then look at the rim: the rim appears to rotate clockwise. Everything still goes east to west.',
+      'There is real dispute in astrophotography over whether celestial south pole time-lapses are genuine, with claims of special filters, dome cameras, wide angles, mislabelled northern shots and outright rendering. Set that aside: there is plenty of footage showing the Milky Way and Southern Cross streaking across the sky in a shallow curve, looking nothing like a Polaris time-lapse.',
+      'The stars run about one degree short in their daily rotation, which raises the question of how long a day actually is. On the azimuthal map Australia sits opposite Africa and South America, so a large clockwise spiral traced at each end is entirely possible — a pattern rather like a hurricane, with stars passing above and below it.',
+      'How far the stars are determines how easily southern angular variation shows up, and on the azimuthal map the longitude lines grow much wider toward the south, which matters enormously for perspective. Crepuscular and anticrepuscular ray footage shows how light angled upward can rise at the horizon, and the same reasoning has been applied to stars crossing a dome. Rotating discs of projected light off a parabolic mirror, and double convex lens experiments, reproduce these trails.',
+    ],
+    tags: ['polaris', 'celestial south pole', 'dome', 'star trails', 'southern cross'],
+  },
+  {
+    id: 'stellar-parallax',
+    category: 'sky',
+    question: 'What is stellar parallax and why does it matter?',
+    summary: 'Nearer things shift more. No stellar parallax is observed, which the model reads as stars sharing one altitude.',
+    answer: [
+      'Parallax is the effect where closer objects appear to move more. Hold your hand in front of your face and move it and it leaves view quickly; have a friend across the room move theirs and it barely shifts.',
+      'There is no stellar parallax, which fits stars all sitting at roughly the same altitude. It is also why some stars are declared to be up to a billion light years away — at that range nobody could confirm a parallax except the people making the claim.',
+      'That commitment forces other claims. The solar system, the galaxy and the universe all have to be described as flat, because the stars move along the same plane and there is no other way to explain it. Then come quasars, black holes and dark matter, theories built from mathematical models and then reported as facts, using theories to alter facts instead of facts altering theories.',
+      'They routinely claim to see five billion light years out, which is sextillions of miles. It is worth asking what optics survive that distance without the light being blocked or bent. And paradoxically, if that many stars were visible the whole sky would be lit; what we actually see is mostly dark.',
+      'The sidereal day is shorter than the solar day. If both are caused by one spin, how? The round-earth answer is that the earth is also orbiting. Meanwhile, because every element refracts, light would statistically never arrive intact from millions of light years, and stars would never hold stable positions. Astronomers themselves will not measure stars below 20 degrees of elevation because the air bends them too much — which is an admission that air alone makes measuring parallax from the ground impossible.',
+    ],
+    tags: ['parallax', 'stars', 'light years', 'dark matter', 'sidereal day'],
+  },
+  {
+    id: 'what-are-stars',
+    category: 'sky',
+    question: 'What are stars? What are planets?',
+    summary: 'Unknown lights. Planets wander independently of the star field and emit rather than reflect.',
+    answer: [
+      'Nobody knows. Planets differ from stars because they do not move with the star field; the ancients called them wandering stars for that reason.',
+      'Zoom in on a star with a telescope and you see something remarkable. Some flicker, some change colour, some are dull and some brilliant. They look nothing like agency imagery. They are the heavens, and they were called that for a reason.',
+      'We can see the Milky Way and other beautiful structures, but they show no parallax and the pattern never changes. They are plainly not billions of miles away.',
+      'Some researchers have flown light-sensitive cameras above the atmosphere and been unable to capture stars at all. More work is needed there. Planets emit light exactly as stars do, which means they are not solid ground.',
+    ],
+    tags: ['stars', 'planets', 'wandering stars', 'telescope'],
+  },
+  {
+    id: 'planets',
+    category: 'sky',
+    question: 'What about planets? Agencies tell us they are real.',
+    summary: 'The model treats them as independently moving lights, since that is all that is observable from the ground.',
+    answer: [
+      'Look at the footage, especially from the 1960s and 70s. It is obviously fabricated, and it takes deliberate effort not to notice. Most people simply never think to question it.',
+      'Matt Boylan was a hyper-realist artist who worked for NASA making textures. He says a superior told him the earth was flat, and he leaked it.',
+      'The flat model treats planets as lights that move independently of the stars, because that is what we observe from the ground. They emit light and do not reliably show phases through telescopes or zoom cameras, though there are claims on both sides. Mostly they never vanish during a supposed dark phase — from the ground every planet should be seen to disappear for periods. Instead they shine steadily.',
+      'So in this system planets are simply lights of unknown design and origin until demonstrated otherwise, sharing many qualities with stars.',
+    ],
+    tags: ['planets', 'matt boylan', 'lights', 'phases'],
+  },
+  {
+    id: 'aurora',
+    category: 'sky',
+    question: 'What about the aurora?',
+    summary: 'Ionised air in a powerful magnetic field. Oxygen glows green or red, nitrogen blue.',
+    answer: [
+      'Near the north pole the sky changes dramatically through the year. But remember there is a massive magnetic field around the earth, and that is more than enough to produce this.',
+      'The colours depend on the chemistry of the air. Heavily ionise particles and you change their colour: oxygen can go yellow-green or red, nitrogen blue, and mixtures give the rest.',
+      'There are claims of a southern lights counterpart, which is debated, and some northern footage has been passed off as southern. Even if a southern aurora is real, the magnetic field accounts for it. Some argue for a ring magnet around the rim giving us a north and a south, and those forces could distort compasses and therefore the maps.',
+    ],
+    tags: ['aurora', 'magnetic field', 'ionisation', 'southern lights'],
+  },
+  {
+    id: 'rainbows-comets',
+    category: 'sky',
+    question: 'What about rainbows? What about comets?',
+    summary: 'A reflective covering would explain rainbows, halos and sundogs — and melting ice above would explain comets.',
+    answer: [
+      'Rainbows may not be produced by individual droplets. A prism splits light measurably, but the droplet account requires that to happen in every single raindrop simultaneously. It is more economical to suppose the sun is reflecting off a covering, or that the effect comes from the shape of the light in the sun itself, or from splitting and bending through refraction.',
+      'A domed lamp cover throws small rainbows onto a wall. Try making a rainbow indoors with water vapour and you cannot; do the same experiment outdoors and you can. Enclose the vapour or the light under a round dome indoors and it works. The same reasoning covers halos, sundogs and other optical anomalies.',
+      'If there is ice above — "waters above and below" — far enough from the sun to stay frozen, then tips of ice breaking away would give us shooting stars and comets. Large debris falls, mostly evaporating on the way down, and what survives impacts like a meteor. That explains meteors arriving from nearby far better than debris travelling millions of miles and finding us daily. If the solar system is flying through space at hundreds of thousands of kilometres per hour, how does Halley’s comet keep finding its way back?',
+      'Astronomers can predict celestial events, but so could the ancients who held a flat cosmology. Prediction comes from long observation and pattern-finding, whichever model you hold. The pyramids and Stonehenge are aligned to the sky, and the sundials of those cultures still work today — which is odd if we have since travelled many light years through space.',
+      'One more point for an enclosure: modern science claims the vacuum of space strips around 90 tons of atmosphere from the earth. Setting aside whether a vacuum can sit against a non-vacuum at all, over the claimed age of the earth that leak should have caused dramatic problems by now.',
+    ],
+    tags: ['rainbow', 'comets', 'dome', 'halo', 'sundog', 'meteor'],
+  },
+  {
+    id: 'anomalies',
+    category: 'sky',
+    question: 'Are there other anomalies? What else do people observe?',
+    summary: 'Two moons, sundogs, giant objects and clouds appearing behind luminaries.',
+    answer: [
+      'People report two moons in the sky, two suns — sundogs — and large objects overhead. Refractive phenomena explain some, and some videos are certainly fake.',
+      'Many observers report clouds appearing behind the sun or moon, which would be a genuine anomaly. It is hard to say what is going on. Some argue a dome would produce sundogs through reflection; refraction is the first candidate either way.',
+      'Anyone discussing "Nibiru" may simply not be aware of the flat model, which would account for a good deal of what is seen in the sky that does not match the official narrative.',
+    ],
+    tags: ['anomalies', 'sundog', 'two moons', 'nibiru'],
+  },
+  {
+    id: 'sun-direction',
+    category: 'sky',
+    question: 'Why does the sun come in counter-clockwise in some places and clockwise in others?',
+    summary: 'Whether you stand north or south of the sun’s track determines which side it appears to enter from.',
+    answer: [
+      'The sun rises in the east and sets in the west. If you are south of the sun it appears to come in from one side; if you are north of it, the other. In a geocentric model that is common sense.',
+      'The same applies to stick and shadow. People try to catch flat earthers out by pointing to a shadow rotating counter-clockwise in the south. That happens because the sun is north of the stick there, casting a southern shadow as it crosses in front; above the equator the sun is south of the stick and casts a northern shadow crossing behind.',
+      'The sun curves in toward you in the southern hemisphere and around you in the northern one. It is obvious once you watch the time-lapse footage.',
+    ],
+    tags: ['shadow direction', 'hemisphere', 'time lapse', 'sun path'],
+  },
+  {
+    id: 'sun-timelapse',
+    category: 'sky',
+    question: 'What does time-lapse of the sun show? What about arctic summer?',
+    summary: 'Light shrinking around the disc at the horizon, and a 24-hour circuit in the north with no southern equivalent.',
+    answer: [
+      'Time-lapse shows, again and again, the sun’s light shrinking toward the horizon — an effect only a spotlight produces. Light arriving from millions of miles away would not contract around the disc like that.',
+      'The diameter changes as well, which the atmosphere dilating the light accounts for. And you can watch the sun move across above you.',
+      'Arctic winter and summer follow from the spiral around the north pole: when the sun is close it never sets, and when it is far it never rises. Nobody reaches the true north pole without military approval in any case.',
+      'The southern arctic-summer clip was debunked — the glare looked artificial and there were other unnatural problems. Any time-lapse can be shot in the north and labelled south. What southern footage does show is the sun swinging inward along its path, matching the flat model, and the sun is never seen south of the south pole. Meanwhile it goes a full 360 degrees around the north pole in arctic summer. Those two facts do not sit together on a globe.',
+    ],
+    tags: ['time lapse', 'arctic summer', 'midnight sun', 'spotlight'],
+  },
+];
+
+// ──────────────────────  GRAVITY & PHYSICS  ──────────────────────
+const physicsFaqs: FaqEntry[] = [
+  {
+    id: 'gravity',
+    category: 'physics',
+    question: 'What about gravity?',
+    summary:
+      'The model replaces mass attraction with buoyancy, density, pressure and electromagnetism — all of which are testable on a bench.',
+    keyPoints: [
+      'Fall rate tracks the density of the medium: slow in water, faster in air, fastest in vacuum.',
+      'Gravity is the one claimed force with no place on the electromagnetic spectrum.',
+      'No bench experiment shows small masses attracting each other by mass alone.',
+      'Electrostatics and magnetism demonstrably produce directional force and can lift non-magnetic objects.',
+    ],
+    answer: [
+      'Gravity can be accounted for by buoyancy, density, pressure, electrostatics and electromagnetism. Things fall at different speeds depending on density: drop a ball in water and it sinks slowly, in low-altitude air it falls faster, in high-altitude air faster still.',
+      'We also sit inside a large magnetic field, which can account for up and down. Magnetism has many under-appreciated effects — the Lenz effect among them — and very powerful magnets act on non-magnetic objects; there is laboratory footage of one levitating a strawberry. If we already have magnetism, why is another force needed?',
+      'Newton’s gravity is the only claimed force of nature with no place on the electromagnetic spectrum. Sound, light, radio — everything else is measurable there. That alone signals a problem.',
+      'Gravity is never seen in a bench experiment, not even at micro scale. Dust, bacteria and proteins are not drawn to boulders. Why would mass alone attract mass?',
+      'Instead gravity is used to dismiss every objection to a ball. Why does the moon not get pulled away by the sun? Gravity. Why does the air move in perfect step with the spin, leaving no evidence we are turning? Gravity. Stephen Hawking wrote that "because there is a law such as gravity, the universe can and will create itself from nothing." It has become the new religion.',
+      'Electromagnetism and electrostatics have demonstrated directional force. Why not assume electrostatics produces the downward force, especially when a compass confirms the field? You would think every scientist would race to the north pole to measure it.',
+      'Air pressure also produces directional force. Pressurise a container and things move with the pressure. Temperature adds to it, since heated molecules become excited, collide and expand. Rub a balloon in your hair and it attracts water — electrostatics moving a non-magnetic substance. The scientific method runs on reproducible experiment, and a force that only manifests at planetary scale is a very poor theory when the alternative can be tested on a table.',
+    ],
+    tags: ['gravity', 'buoyancy', 'density', 'electrostatics', 'magnetism', 'cavendish'],
+  },
+  {
+    id: 'cavendish',
+    category: 'physics',
+    question: 'How was the Cavendish experiment done?',
+    summary: 'The model holds that it cannot be cleanly reproduced, and that the constant was reverse-engineered.',
+    answer: [
+      'It cannot be reproduced reliably. The view here is that Cavendish reverse-engineered the gravitational constant from an assumed diameter of the earth.',
+      'It is also worth noticing that the claimed axial tilt is 66.6 degrees off the plane of the orbit.',
+      'For any experiment to be useful it must be easy to reproduce. This one is not.',
+    ],
+    tags: ['cavendish', 'gravitational constant', 'reproducibility'],
+  },
+  {
+    id: 'relativity',
+    category: 'physics',
+    question: 'What about relativity?',
+    summary:
+      'The argument is that the speed of light was fixed wrongly in air, and relativity was invented to protect the number.',
+    answer: [
+      'Tesla was one of the greatest minds in history and he did not accept relativity. The claim here is that the speed of light is simply wrong. Light moves more slowly through water and through air; in a true vacuum it would be many times faster. The measurements are taken in lower-atmosphere air, and round-earth arguments habitually forget about air and refraction.',
+      'Relativity patches that problem. The theory says that the closer you get to light speed, the slower time runs, which pins the speed at 300 million metres per second. But we watch light slow through gases and liquids.',
+      'There is a good video by the mathematician Norman Wildberger working through how relativity is used to correct latency in satellite GPS. He is not a flat earther, but the maths shows why the correction was needed. The catch is that the alleged satellite distances create millisecond delays when synchronising clocks. Use skywave or low-altitude balloons and no such latency exists, particularly if light moves much faster in a more buoyant atmosphere.',
+      'And why should time slow as you speed up? Your velocity moves you through time? Or is it simpler to conclude they got the speed of light wrong and we are not on a ball?',
+      'Relativity was also deployed against the Michelson–Morley experiment, which found no change in light’s speed whichever direction it was reflected. Without relativity, the model it rescues falls apart.',
+    ],
+    tags: ['relativity', 'einstein', 'tesla', 'speed of light', 'gps', 'michelson morley'],
+  },
+  {
+    id: 'coriolis',
+    category: 'physics',
+    question: 'What about the Coriolis effect?',
+    summary: 'Artillery and snipers do not correct for it, sinks drain by basin shape, and hurricanes spin both ways.',
+    answer: [
+      'This one is an old wives’ tale. Cannons fired straight up can drop the ball back into the muzzle, and gunners never adjust for direction of fire. Neither do snipers: the job is to hold the crosshairs and keep your breathing steady, with the target miles out. A sniper testified to exactly this on a flat earth radio show.',
+      'Then there is the claim that toilets swirl the other way in the south. If that were true we would notice the spin in far more than plumbing. Water swirls according to the shape of the basin and the manufacturer, nothing else.',
+      'Hurricanes have been shown to spin in either direction. And we sit inside a large magnetic field that could influence them. If the sun circles above us, its heat current expands and contracts air, which is a reasonable small contributor to tides and to the air currents that drive hurricanes.',
+    ],
+    tags: ['coriolis', 'sniper', 'cannon', 'hurricane', 'toilet'],
+  },
+  {
+    id: 'foucault',
+    category: 'physics',
+    question: 'What about Foucault’s pendulum?',
+    summary: 'Short pendulums do not show the effect, and the swing depends on the joint that hangs it.',
+    answer: [
+      'Most Foucault pendulums have to be very large, which is contradictory — the effect should scale down. Search for "short Foucault pendulum" and you will find a list of excuses instead.',
+      'There are also claims of mechanically driven pendulums, and the manufacturer and method would need full investigation. Museums have recalled exhibits before on discovering they were frauds, and the line that the original is safely stored while a replica is displayed has not always been true.',
+      'The swing depends on the ball-and-socket joint and how it is built, not on a spin. There are magnetic pendulums on YouTube demonstrating how a field alters the precession. The sun, moon and stars all run east to west, so a field influencing that motion is a reasonable thing to consider.',
+    ],
+    tags: ['foucault', 'pendulum', 'precession', 'magnetic'],
+  },
+  {
+    id: 'orbits',
+    category: 'physics',
+    question: 'So what about orbits?',
+    summary: 'The three-body problem, degrading simulations, and a moon that never gets pulled away by a much stronger sun.',
+    answer: [
+      'Try doing the maths for orbits and it does not work out. That is why there are so few open-source gravity simulators for orbits online. The ones that exist cannot run the moon and the sun simultaneously, which is the three-body problem, and no closed-form equations match our observations.',
+      'Some simulators cheat the orbit, or skip applying gravity to every object, or round the numbers, or add exceptions for close orbits. None can show orbits lasting billions of years without degrading into a spiral, escaping, or colliding.',
+      'The earth–moon case is the worst of it, because on the round model the moon is larger than Pluto, making this a planet-to-planet relationship, with the moon estimated at one sixth of earth’s gravity. That is a tremendous pull.',
+      'So how does the moon pull the earth while the earth pulls the moon without collision? Put two magnets near each other and they meet. How does an orbit persist for a billion years without degrading? Doesn’t that violate thermodynamics — that things change with time, that there is no perpetual motion?',
+      'The classroom demonstration with balls on a stretched sheet makes the point against itself: the balls always spiral in and collide within a few revolutions. The answer given is that there is no friction in space, which does not explain why the orbit would not degrade anyway when both bodies pull on each other. Imagine the same demonstration with magnetic balls.',
+      'The moon is never pulled away by the sun despite the sun’s far stronger claimed pull. The excuse is that the sun is not close enough. Then why does the moon’s pull on the earth not supersede the sun’s? Why are there no mini-moons orbiting the moon? Modern science does not bother to answer these.',
+      'Agencies will tell you satellites travel 100,000 miles per hour. If thousands of them surround us, where are the photographs? What exists looks like cartoons, and none of them match. If the moon has an elliptical orbit, why does its apparent size not change? They say it wobbles, but we never get a view of the far side. The earth is said to have an elliptical orbit too, with no matching change in temperature or light angle.',
+      'And why accept the coincidences at all? That the moon circles us by luck, happens to match the sun’s apparent diameter, and always faces us. Those odds are about the same as a car assembling itself from scrap.',
+    ],
+    tags: ['orbits', 'three body problem', 'simulation', 'moon', 'thermodynamics'],
+  },
+  {
+    id: 'tides',
+    category: 'physics',
+    question: 'What about the tides?',
+    summary: 'Solar heating expanding and contracting the water, with the magnetic field as a second influence.',
+    answer: [
+      'The sun heats the water daily as it passes over. Heated things expand and cooled things contract. There is also a magnetic field around the earth.',
+      'Tides remain under investigation, but they are plainly not caused by the moon, though the moon’s path may be related through an electromagnetic or solar heating effect. The moon does sit in slightly different positions each cycle.',
+      'If the moon could lift trillions of tons of water it would have collided with us long ago, and it would visibly affect a great deal else. On the round model the moon circles monthly; on the flat model it circles daily. The lunar calendar gives 28 even days per month, which is a more even calendar.',
+      'And if the moon causes tides, how are there multiple high tides in a day? The flat system attributes tides to the sun’s movement, what some have called a cosmic breath. Others argue magnetic north drives water currents.',
+    ],
+    tags: ['tides', 'moon', 'heating', 'cosmic breath', 'lunar calendar'],
+  },
+  {
+    id: 'water-air-movement',
+    category: 'physics',
+    question: 'What about the movement of water and air?',
+    summary: 'Currents and weather circulate cleanly on an azimuthal equidistant projection and look random on a globe.',
+    answer: [
+      'Air and water streams make no sense on a round earth. Plot them on an azimuthal equidistant map — and there are a few weather sites that let you do this — and they circulate perfectly.',
+      'On a globe projection you get unexplainable patches and patterns that look essentially random. Heat patterns, weather patterns and currents all flow coherently on the azimuthal map.',
+    ],
+    tags: ['currents', 'weather', 'azimuthal', 'jet stream'],
+  },
+  {
+    id: 'earth-age',
+    category: 'physics',
+    question: 'What about the earth’s age?',
+    summary: 'Radiometric dating rests on an assumed constant decay rate, and labs return wildly inconsistent results.',
+    answer: [
+      'What about it? How was the number arrived at? Historians do not always agree about events a few hundred years back, yet the earth is confidently billions of years old.',
+      'Radiometric dating carries enormous error. Many labs run margins of 90% or worse, which is not an exact science, and results that do not meet expectations get discarded. Much of it rests on assumptions about history in the first place, and it tends to disregard alchemic reactions in animal stomachs. It does not explain diamonds that take so long to form if carbon decays.',
+      'Ask the underlying questions. What experiment reproduces the half-life of carbon-14? Can radioactivity be restored to an element? Is any stimulus applied to determine a half-life? Is atomic theory still a theory? Why is the decay rate assumed constant? What happens across long gaps between repeat runs?',
+      'Why do carbon-14 results vary so much? There is a documented case of living snails dated at 2,300 and 27,000 years old. You can test it: send live molluscs to a lab and see what comes back.',
+      'Consider an hourglass you walk in on, half run through. Can you say it has been running half its time? No. You do not know when it was turned, whether sand was added, or whether it spent time on its side. Any scientist who says otherwise is not questioning their own material.',
+    ],
+    tags: ['radiometric', 'carbon 14', 'dating', 'half life', 'snails'],
+  },
+];
+
+// ──────────────────────  MAPS, FLIGHTS & ANTARCTICA  ──────────────────────
+const mapsFaqs: FaqEntry[] = [
+  {
+    id: 'ice-wall',
+    category: 'maps',
+    question: 'What is the Antarctic ice wall? What is at the edges?',
+    summary:
+      'The model puts an ice rim all the way around the rim of the plane, treaty-protected and effectively closed to independent travel.',
+    diagram: 'icewall',
+    keyPoints: [
+      'On the azimuthal equidistant projection the north pole is the centre and Antarctica is a ring, not a cap.',
+      'Explorers report walls of ice, with claims of heights up to 10 miles in places.',
+      'The Antarctic Treaty makes the region a restricted zone patrolled by signatory militaries.',
+      'What lies beyond the ice is stated as unknown, not claimed.',
+    ],
+    answer: [
+      'Lay the world out on an azimuthal equidistant projection and the north pole sits at the centre. What we call Antarctica is no longer a cap at the bottom; it becomes a continuous ring of ice around the entire rim. That is the shape the model proposes, and what is beyond it is explicitly unknown rather than claimed.',
+      'Yes, people can go south, and that proves nothing on its own. They will not take you there for long. The usual destination is a spot called, genuinely, Deception Island, described as the safest harbour. Researchers found that the same person registered the domains for these tours and controls them.',
+      'Jeranism has a good exposé on Antarctic tourism. The price runs into five figures, which excludes 99% of the world by itself, and the domains for these expensive cruises are owned by a military member with close ties to presidents and senators. Bookings are met with delays and problems.',
+      'Beyond that, nobody knows what is out there for several practical reasons. The deep south drops past -100 degrees, which drains electronics fast and makes survival a daily problem; flying at those temperatures is a serious risk. And there is the ice itself, with claims of walls as high as 10 miles. There is a great deal of photography of enormous walls and glaciers, which is what you would expect from water far from the sun and permanently frozen.',
+      'The decisive factor is the Antarctic Treaty. Since it was signed the region has been restricted to pre-approved tours and scientific expeditions. Go without permission and your boat or plane is intercepted. It is far easier to patrol than people assume, because almost nobody goes south anyway, and radar and weather balloons cover the approaches. Hundreds of countries that cannot sign simple peace treaties agreed on this one, making it a no-fly zone with no extraction of oil, gold or minerals. A single jet or boat turns anyone around, and that does happen from time to time.',
+    ],
+    tags: ['ice wall', 'antarctica', 'antarctic treaty', 'deception island', 'azimuthal', 'rim', 'edge'],
+  },
+  {
+    id: 'circumnavigation',
+    category: 'maps',
+    question: 'How can you circumnavigate or go around a flat earth?',
+    summary: 'Because the north pole is the centre. Heading consistently west or east walks you in a circle around it.',
+    answer: [
+      'Because the north pole is at the centre. You use a compass to point to it, so the compass is always aimed at the middle. Going west or east simply carries you around that centre.',
+      'Test it yourself. Put a powerful magnet in the middle of a room, hold a compass, and walk steadily west. You will trace a circle.',
+    ],
+    tags: ['circumnavigation', 'compass', 'centre', 'magellan'],
+  },
+  {
+    id: 'longitude-south',
+    category: 'maps',
+    question: 'Wouldn’t longitude lines be wider in the south?',
+    summary: 'They are, and the model treats that as a direct measurement rather than a projection artefact.',
+    answer: [
+      'Yes, and they are. Captain Cook circumnavigated and logged over 50,000 miles. He and many others recorded a wall of ice, which makes sense for water far from the sun.',
+      'You can check this by measuring distance between longitude lines and looking for inconsistency. One researcher put it this way: "I was working through a flat earth idea this morning and discovered that the longitude distance between Tucson and Charleston, at latitude 32 north, is 36 longitude degrees, and so is the longitude distance between Perth and Sydney, at latitude 32 south. In the northern hemisphere that 36 degree separation is 2,000 miles; in the south it is almost 3,000 miles, or 50% longer. When I checked a north polar map projection with equidistant latitude lines from pole to pole, a good approximation of a flat earth map, the distance between the longitude lines was similarly 50% wider at that latitude."',
+      'Many flat maps carry their own distortions, because they are drawn with magnetic drift assumptions that came from the globe. Remove that assumption and you can draw more accurate maps.',
+    ],
+    tags: ['longitude', 'captain cook', 'perth', 'sydney', 'distance'],
+  },
+  {
+    id: 'maps-wrong',
+    category: 'maps',
+    question: 'So are the maps wrong?',
+    summary: 'Mercator inflates the north badly. The azimuthal equidistant projection is the better working map.',
+    answer: [
+      'The maps are badly wrong. Google Maps still uses the Mercator projection, which shows Greenland as large as Africa when it is not a twelfth the size. You can check the square mileage online. None of the country areas match their projected sizes, and the northern hemisphere is shown far larger than the southern.',
+      'The azimuthal equidistant map is one of the better ones. It is a polar projection with much better proportions, and it is what is used for HF radio work. Why use it there instead of a globe?',
+      'Globe proponents say Mercator is poor because flattening a sphere is hard. That does not explain why the northern hemisphere covers nearly twice the space it should. The Mercator projection shrinks the southern hemisphere and hides how much land is there. The Peters projection was better proportioned — why was it not adopted?',
+      'The magnetic drift assumption has made Australia too large on flat maps, but the lines can be redrawn without it since the assumption came from a ball. Shipping routes and sunrise times are better inputs. A solar sunrise map could be drawn from assumed distances between cities and their sunrise times. The sun does refract, but a much better map is still achievable, and dropping the drift assumption would correct many anomalies. It is possible no perfect map exists.',
+    ],
+    tags: ['mercator', 'azimuthal', 'peters projection', 'greenland', 'hf radio'],
+  },
+  {
+    id: 'antarctic-flights',
+    category: 'maps',
+    question: 'Have there been flights over Antarctica, circumnavigating south to north?',
+    summary: 'The model says no verified pole-to-pole southern circumnavigation exists, and that routes cluster in the north.',
+    answer: [
+      'There have not been, and that is significant. People fly south, but never too far south, with cold, no-fly zones and other reasons given. There was one alleged attempt that proved impossible to verify.',
+      'If the earth were a globe, South America would use southern routes to reach Africa the same way North America exploits polar routes. The temperature disparity alone is telling — why are the north and south poles not similar temperatures on a ball?',
+      'Shipping routes off the usual paths run into extreme delays too. Almost every route and flight path is concentrated around the north.',
+    ],
+    tags: ['flights', 'antarctica', 'routes', 'polar'],
+  },
+  {
+    id: 'southern-flights',
+    category: 'maps',
+    question: 'What about flights from Chile to Australia? Are there no direct southern flights?',
+    summary: 'The model reads the routes, delays, stopovers and pricing as evidence the advertised geometry is wrong.',
+    answer: [
+      'Search those flights and you will find passenger footage such as "Vuelo Qantas QF28 SCL-SYD, sobre la Antartica". The problem is that it unexplainably passes over ice that should not be Antarctic ice. On the globe, a direct flight from Chile would run essentially straight west and would never go south, so you would never see ice at all. The passenger mistook arctic ice for antarctic ice, and who could blame him? The route can be flown without touching land. On a similar flight the GPS drops out over the ocean, which a passenger complained about at length.',
+      'These are special aircraft, and several video investigations cover them. The flights are frequently cancelled and delayed. If a route is 13,000 miles on the flat map — to Auckland, for instance — the aircraft would need to reach around 1,000 miles per hour. The fastest commercial airliner was Concorde at 1,300 mph, so higher speed above the clouds on a faster aircraft is not unreasonable. If instruments are computer controlled, the system can mislead the pilot.',
+      'But that speed may not even be needed. Check the listings: Auckland and Sydney routes are routinely shown as delayed 30+ minutes, which means the times are not being reported accurately and the required average speed drops again. The Pacific is mostly water, and genuinely direct southern flights are very few in number.',
+      'The problems continue. Times online are never accurate, with time-zone tricks and bogus booking-site information. You are often made to call, then moved to a connecting flight. Cancellations are frequent and fares run hundreds of dollars above what they should, which is consistent with more fuel and with discouraging bookings. And there are nearly always fuel stops; the aircraft and tank capacities have been analysed.',
+      'Look at the paths themselves and you will find them fascinating. South Africa to Australia takes an enormous detour into the northern hemisphere. Routes that make no sense on a Mercator map or a globe, running hundreds of miles out of the way, are almost always straight lines on the flat map. Want to fly to Asia from the USA? Do not be surprised when they route you north. Check the layovers and try to make them work on a globe.',
+    ],
+    tags: ['flights', 'qantas', 'santiago', 'sydney', 'routes', 'layover'],
+  },
+  {
+    id: 'compasses',
+    category: 'maps',
+    question: 'What about compasses and magnetic drift? Didn’t old cultures navigate assuming a globe?',
+    summary: 'They navigated by sextant, stars and the sun. Drift is treated as a patch for badly drawn maps.',
+    answer: [
+      'They circumnavigated on a flat earth. They used sextants and star patterns to fix position, along with the sun and the seasons. Bees use the sun to navigate and to communicate the position of food; it is extremely useful when you have no compass.',
+      'The compass works perfectly well. Magnetic drift exists to explain poorly drawn maps; on a correct map the compass would agree. Any remaining variance may come from different theories about what produces the field. Some argue it behaves like a giant ring magnet pointing south; others propose a magnetic mountain, Mount Meru.',
+      'Either way there is a large field and it behaves like any other magnet. The round model says the earth is a ball magnet. When have you seen a ball magnet with a north and a south pole? It does not exist anywhere, so why would the earth be one? They even say the poles will flip. Has that ever happened to a normal magnet, and can it be reproduced?',
+    ],
+    tags: ['compass', 'magnetic drift', 'sextant', 'navigation', 'mount meru'],
+  },
+  {
+    id: 'antarctic-tours',
+    category: 'maps',
+    question: 'What about tours to Antarctica? Won’t we fall off the edge?',
+    summary: 'Tours go to a fixed set of approved destinations at five-figure prices, and nobody falls off anything.',
+    answer: [
+      'Nobody falls off. The ice continues outward and what lies past it is unknown, which is a different claim from an edge you could walk over.',
+      'As for the tours: they go to approved destinations, principally Deception Island. Prices run into five figures, putting them out of reach of almost everyone, and the domains for these cruises trace back to a single military-connected owner. Travellers report delays and cancellations.',
+      'Beyond the commercial question, the deep south is genuinely lethal. Past -100 degrees, batteries fail, electronics drain and flying becomes an extreme risk. Who needs to patrol a place like that? And yet, since the treaty, it is patrolled.',
+    ],
+    tags: ['antarctica', 'tours', 'deception island', 'edge'],
+  },
+  {
+    id: 'triangle-proof',
+    category: 'maps',
+    question: 'What about walking a triangle with three right angles? Doesn’t that prove a sphere?',
+    summary: 'A compass bearing curves on a plane with a central pole, so those are not straight lines to begin with.',
+    answer: [
+      'There is a proof that involves travelling immense distances and turning at right angles until you arrive back where you started. First, nobody would ever actually attempt it. Second, if it were valid the same experiment should work at smaller scales. Third, those would not be straight lines: using a compass makes you walk a curve on a flat earth, because the north pole is at the centre.',
+      'Star patterns do change when you are north or south of them, and that supports a plane. Look at something on your ceiling, walk north of it, then walk south of it. The pattern flips; one position is right side up and the other inverted. That is triangulation, and it shows the stars are close.',
+      'They also say stars rotate counter-clockwise over the southern pole star and clockwise around the northern one. That is true, and it cannot be otherwise — and it works perfectly well on a flat earth.',
+    ],
+    tags: ['triangle', 'geometry', 'star patterns', 'compass bearing'],
+  },
+];
+
+// ──────────────────────  SPACE AGENCIES  ──────────────────────
+const spaceFaqs: FaqEntry[] = [
+  {
+    id: 'earth-photos',
+    category: 'space',
+    question: 'What about photos and videos of the earth?',
+    summary: 'The model points to composites, mismatched continent sizes and static clouds across full rotations.',
+    answer: [
+      'None of the photographs match. In some the United States appears nearly double the size it does in others. Cloud patterns are visibly copied, and sometimes clouds are missing across half the planet.',
+      'The videos are worse. Clouds do not move through entire claimed rotations. One of the worst was the "dark side of the moon" sequence, with a green outline and poor rendering, and it was only a handful of frames; the satellite would have had to be half a million miles out to get that shot.',
+      'NASA admits its earth images are composites assembled from strips. That much follows, since the data can come from aircraft footage stitched together. The problem is the implication: if the earth were a ball we would have thousands of photographs, not rendered composites.',
+      'A photo was supposedly taken of the earth from the moon, but it is too small. Import it into Photoshop and you can tell the earth was added. Question it and you get a stream of excuses for why a simple snapshot is impossible.',
+      'Footage of other planets is worse still, especially from the 1960s and 70s, with explanations about needing to capture light in special ways. It looks fake, and the photos and videos never match each other. Agencies subcontract planetary imagery, which makes concealment easier, and teams stitch strips together to hide the absence of any complete image.',
+      'We can photograph the sun or the moon from the ground with ease. The absence of comparable imagery speaks for itself. There appears to be no footage at all of astronauts on the moon with the earth in the background, across multiple missions, when it would have been the first thing anyone filmed.',
+    ],
+    tags: ['nasa', 'photos', 'composite', 'cgi', 'blue marble'],
+  },
+  {
+    id: 'balloon-curve',
+    category: 'space',
+    question: 'What about footage above the clouds? I saw a curve in the Red Bull jump.',
+    summary: 'That curve flexes through the footage, which is what a fisheye lens does, not what a planet does.',
+    answer: [
+      'The Red Bull jump shows the curve moving. It goes upside down, flat, right side up, convex, concave, flat again. That is a fisheye lens, and it is extremely obvious once you watch for it. Nobody actually studies the footage.',
+      'Fisheye lenses are standard for wide shots, and they bow anything far from centre because of the angle at which light enters the lens. The footage is an embarrassment; the curve flops around like a wet noodle.',
+      'All agency footage uses fisheye, rendering or green screen. People who shoot without a fisheye see a perfectly flat horizon. Plenty of independent researchers have verified this and you can too: send up a camera without a fisheye lens and there is no curve.',
+      'That a lens alone produces this effect should tell you something about how much every lens changes what you see.',
+    ],
+    tags: ['red bull', 'felix baumgartner', 'fisheye', 'gopro', 'balloon'],
+  },
+  {
+    id: 'satellites',
+    category: 'space',
+    question: 'What about satellites?',
+    summary: 'Skywave, high-altitude balloons, ground towers and undersea fibre already cover the work.',
+    answer: [
+      'Radio existed before satellites. Long-distance communication was already possible with skywave, which reflects signals off the ionosphere. To send a signal a long way it is easier to put it above the clouds where there is less air in the way.',
+      'More efficient still are high-altitude balloons. A government only needs helium or weather balloons to relay signals, so why send anything thousands of miles up?',
+      'There is also the imagery problem: pictures of alleged satellites look like cartoons. The Hubble telescope looks like a flying aluminium tin can. And how does a satellite pass the thermosphere without melting in the thousands of degrees claimed for it?',
+      'Much of our networking runs on ground-based towers anyway, plus the fibre optic cables crossing the oceans.',
+    ],
+    tags: ['satellites', 'skywave', 'ionosphere', 'hubble', 'fibre'],
+  },
+  {
+    id: 'see-satellites',
+    category: 'space',
+    question: 'Can’t we see satellites, or the ISS, from the ground?',
+    summary: 'The model attributes those sightings to balloons and aircraft, and calls the ISS captures unconvincing.',
+    answer: [
+      'No. What you are probably looking at is a weather balloon or an aircraft. A satellite at the claimed altitude would be far too small and too distant to resolve.',
+      'Most people who try to capture the ISS fail. The images some do get look strange regardless — a grainy sort of projection, which would not be hard to fabricate.',
+    ],
+    tags: ['iss', 'satellite spotting', 'weather balloon'],
+  },
+  {
+    id: 'iss',
+    category: 'space',
+    question: 'What about the ISS?',
+    summary: 'The model reads the space walks as pool footage and the interiors as parabolic flights and rendering.',
+    answer: [
+      'The station cannot be where it is claimed given the extreme heat said to be up there; whatever heats the particles must heat the ship. It looks badly constructed and not aerodynamic, and there are serious questions about the air locks.',
+      'Space walks are performed in a NASA training facility, which is a swimming pool. There is footage of that online, and it is self-evident in the space walk footage itself where you can see air bubbles in the water.',
+      'Interiors are faked two ways. Aircraft that climb high and dive simulate zero gravity, which you can spot in the harness shapes under some crew members’ clothing and in the similarity to zero-G dives. The rest is rendered. Did Sandra Bullock and George Clooney also go to space for "Gravity"? A great deal is possible on a multi-billion dollar annual budget, and there are many videos showing strong evidence of green screen. It is cheaper to fake space, and serious money can be moved through such a programme.',
+      'Why put parts on the outside so there is a reason to stage space walks? Nothing important should be out there. Vacuums are extremely dangerous: things explode in them and air is pulled through the smallest hole. A layer of glass on a helmet would not protect anyone, and any leak at all would be fatal.',
+      'Helium balloons burst routinely on ascent. If a balloon cannot pass 30 miles without exploding from the pressure differential, how do large rockets manage it?',
+      'Then there is temperature. Arctic expeditions are so dangerous that the deep south is rarely explored. Now imagine a range from -300 to 2,500 degrees. No hull withstands that, yet solar panels sit on the outside and are expected neither to melt nor to freeze.',
+      'The crew never look like people in a life-threatening situation. The women perm their hair to keep it in place rather than shaving it. They play with water for zero-gravity demonstrations while never explaining how basic hygiene, safety and sanity are maintained in such conditions. They are selling a dream, counting on the assumption that they would not lie. People lie every day. Being an astronaut requires one of the highest security clearances in the world, and none of it can be independently verified, which makes it scientifically invalid.',
+    ],
+    tags: ['iss', 'space station', 'pool', 'green screen', 'vacuum', 'zero g'],
+  },
+  {
+    id: 'iss-livestream',
+    category: 'space',
+    question: 'Isn’t there 24-hour video of the ISS?',
+    summary: 'The feed cuts out constantly, and the moon in that footage behaves strangely.',
+    answer: [
+      'There is not. Jeranism on YouTube ran a $1,000 bet that the ISS feed would not stay up for more than half an hour. It cut out constantly and went blank for up to an hour at a time.',
+      'The footage itself is bizarre. The moon appears as a small dot, which makes no sense unless it is some kind of projection, then turns and illuminates from nowhere. It is surreal. High-altitude footage above the clouds generally does not show a large moon the way we see it from the ground, and anomalies like this recur.',
+      'Most likely some of it is shot from a weather balloon with a fisheye lens and edited afterwards, with the constant outages reducing the workload. Some of it is clearly rendered, and rendering can be automated by folding weather data into a composite. They never show the moon crossing in front of the earth, which is another major problem. The "supermoon" video was an insult in how fake it looked, and the curvature is never consistent.',
+      'Live video of a genuine orbiting platform should be the easiest evidence in the world to supply.',
+    ],
+    tags: ['iss', 'livestream', 'jeranism', 'supermoon'],
+  },
+  {
+    id: 'moon-landing',
+    category: 'space',
+    question: 'So did we land on the moon?',
+    summary: 'No. The model cites lighting from multiple sources, pressure-suit problems and the Van Allen belts.',
+    answer: [
+      'No. It is a large subject, but the core of it is that the astronauts were shown to be dishonest about the journey. In the documentary "Astronauts Gone Wild" one astronaut’s son threatened on camera to have the CIA kill the interviewer. Others punched and attacked a man asking difficult questions about the Van Allen belts, anomalies, and heating and cooling. They made things up as they went. Buzz Aldrin threatened to sue when shown leaked footage of them faking the earth through a curved window with the astronauts in shot. To be fair, the film-maker did catch them off guard.',
+      'The lighting on the moon was shown to come from multiple sources, and the lunar module take-off was obviously staged with cables. MythBusters attributed the strange shadows to rare elements on the surface, but there were also reflections of the light source and the film crew. That same programme demonstrated how hard it was to move a hand in a small vacuum at 3.5 PSI, roughly 35,000 feet, which is nothing next to near-zero pressure — see "Inside Adam Savage’s Cave: Space Glove Vacuum Chamber". Their conclusions were hasty enough to raise questions about advisement and sponsorship.',
+      'People who climb Everest get altitude sickness and edema from pressure change, yet no astronaut ever complained of it, and nobody died or was even injured on a lunar mission. We use industrial vacuum machines to lift 30,000 pound steel tubes with no cables, nowhere near the vacuum claimed for space — imagine what that does to a fabric suit.',
+      'There appears to be leaked footage of the set and crew, later covered by a mockumentary. Speed the surface footage up and it looks like earth. Some was reversed. There is no video of the earth from the moon, which is a serious problem on its own, and the stills show the earth too small and have been shown to be edited.',
+      'They could not have crossed the Van Allen belts, with 2,700 degrees of heat and the radiation. The suits make no sense either: how does the visor stop that heat, and how does the suit heat and cool across a range of hundreds of degrees either side of zero? Anyone who has lived through -50 knows those temperatures are not a joke, and the claim is 250 to -250. Entire documentaries cover the suit thermal claims alone, and the problems with the vehicles keep coming.',
+    ],
+    tags: ['apollo', 'moon landing', 'van allen', 'mythbusters', 'buzz aldrin'],
+  },
+  {
+    id: 'spacex',
+    category: 'space',
+    question: 'What about SpaceX?',
+    summary: 'Subsidised, cleared through the same military airspace, and the Tesla launch footage did it no favours.',
+    answer: [
+      'Flying in restricted zones requires military clearance, and serious hurdles have to be cleared to run these tests. The internet community has scrutinised the launches closely. The company is also subsidised by NASA, so there is no meaningful independence.',
+      'Then there was the Tesla in space, which had so many problems and looked so fake that Elon Musk said "you know it’s real because it looks so fake," which makes no sense as a defence.',
+      'And if NASA receives billions a year, why has there been no effort to return to the moon in so many years? One spokesperson claimed they lost the technology and can no longer put a man there. That, plus the habit of losing footage, generates its own doubt.',
+    ],
+    tags: ['spacex', 'tesla roadster', 'elon musk', 'subsidy'],
+  },
+  {
+    id: 'rockets',
+    category: 'space',
+    question: 'What about rockets?',
+    summary: 'They arc rather than climb, which suits long-range weapons testing and recovery at sea.',
+    answer: [
+      'Rockets serve the military for long-range missile testing. It would be more efficient to lift with helium or hydrogen balloons and then use propulsion, so why not do that and save money while improving security?',
+      'Launches always dip the nose. They never go straight up, and why would they, when they are pushing through miles of air while being denser than the air itself and falling? The trajectory is always parabolic, and they usually end up in the ocean where boats recover them.',
+      'Some argue they are trying to send weapons up, or to get over the ice wall. The simpler explanation is that they are testing technology and moving money.',
+    ],
+    tags: ['rockets', 'parabolic', 'missile', 'trajectory'],
+  },
+];
+
+// ──────────────────────  MOTIVE & MEDIA  ──────────────────────
+const motiveFaqs: FaqEntry[] = [
+  {
+    id: 'why-lie',
+    category: 'motive',
+    question: 'Why would anyone lie about this?',
+    summary:
+      'The motives offered are hiding intelligent design, making people feel insignificant, budgets, and the cost of ever admitting it.',
+    answer: [
+      'There are several. The most significant proposed motive is hiding intelligent design — keeping the public from concluding that this place had a maker, whatever form that maker might take. This FAQ promotes no particular theory; it only sets out reasons someone might lie and the means available to do it.',
+      'The key to maintaining it is control of school curricula, of the media, and of the military intelligence agencies. It is no secret that thousands of news outlets are owned by the same handful of people, which means the news can be steered from a few desks.',
+      'Religion is popular, so you might think this could not work. But most of what astronomers tell us contradicts essentially every religion in history. There was not a single one that did not describe a flat earth, and none taught evolution either. That creates internal conflict, denial and contradiction. The Bible alone has hundreds of passages describing a flat earth, a dome firmament, a fixed earth on pillars. Only one is cited against it — "the circle of the earth" — but the same language had a separate word for a sphere and it was not used there. With the north pole at the centre a circular pattern is exactly right, and the word can equally mean the compass of the earth. This is not promoting a religion; it is naming a very large potential motive.',
+      'Others argue land is being hidden. Psychologically, the model also makes people nihilistic and small. Think how it feels to be told you are a speck among sextillions of stars — that makes people easier to govern. Tell them instead that the sun, moon and stars turn above them and they start feeling significant, and they start asking questions.',
+      'Money is a motive as always. Space agencies take in enormous sums, and faking a journey is cheaper than making one. People have done far worse for money than lie about stars.',
+      'And consider what exposure would cost. Once a government starts lying, the lie grows. If it came out now there would be a revolution: much of the military would turn on the politicians, whole government sectors would close, and other scientific bodies would face the same scrutiny. Protecting it becomes a national security matter, because everyone in a position of power would be at risk of arrest. Absolute power corrupts absolutely, and that is a strong reason to keep going.',
+      'That is why media control matters most. This FAQ is media too, and as long as it can be kept from being read or believed by the majority, popular opinion holds.',
+      'There are more exotic theories — extortion, leverage over prisoners, MK Ultra, cloning centres, aliens and demons, people selling their souls. Those are belief systems. Looking at how intelligence agencies and schools actually work, and how profiling works, there are ways to keep secrets extremely well from the top down without any extra layer of belief. The terms are compartmentalisation and disinformation.',
+      'Flat earth itself is not a belief system. It can be tested. You cannot prove a lie; you can prove the truth, and you can demonstrate that the earth is not a spinning ball regardless of what you believe.',
+    ],
+    tags: ['motive', 'intelligent design', 'media', 'budget', 'compartmentalisation'],
+  },
+  {
+    id: 'too-big-conspiracy',
+    category: 'motive',
+    question: 'Wouldn’t every government have to be in on it? Isn’t that too big?',
+    summary: 'The argument points to admitted programmes, secret societies and the Antarctic Treaty as precedent.',
+    answer: [
+      'Not really. Governments are famous for lying. To maintain a war a government has to lie, telling the public that air strikes are in their interest. Killing innocent people never makes sense, so you do not have to look far for a conspiracy.',
+      'Bill Clinton apologised for the harm done to Americans in the MK Ultra experiments run by US military intelligence, most of whose documentation was destroyed. What was released was staggering: drugs, chemicals, frequencies and words used for brainwashing and mind control. Your government admitted it to you.',
+      'There are secret societies you can join today. Want evidence of conspiracy? Join a Masonic temple or the Rosicrucians. They keep secrets, behave in cult-like ways, and have recruited some extremely powerful people. Some want to bring in cloning centres, the devil and aliens; there is enough documented deception without the embellishment.',
+      'Intelligence agencies keep almost all of their activity hidden. Why trust an organisation that classifies 99% of what it does? Would you trust a friend who refused to answer any question about their whereabouts, especially one repeatedly caught lying?',
+      'Edward Snowden mattered because he showed how deceptive the NSA was — spying on citizens, bugging routers, defaming individuals, damaging local businesses with psychological operations and honeypots. He cited JTRIG, an organisation documented as engaging in defamation, cyber bullying and the targeting of citizens, some with no criminal record, who were simply persons of interest. There are similar organisations worldwide.',
+      'It is no mystery that Russia and the USA have been allied in every war. Allies in propaganda can play their militaries off each other for control, and the nuclear scare of the cold war was a perfect excuse for deeper secrecy and larger security budgets.',
+      'Then there is the Antarctic Treaty, where hundreds of countries agreed to put the south pole off limits — no oil, no gold, no minerals, a military-protected no-fly zone. Countries that cannot sign simple peace treaties managed that one. Incoming ships and planes are easy to monitor with radar and balloons, and a single jet or boat turns anyone around who goes too far south.',
+    ],
+    tags: ['conspiracy', 'mk ultra', 'snowden', 'jtrig', 'freemasons', 'antarctic treaty'],
+  },
+  {
+    id: 'scientists',
+    category: 'motive',
+    question: 'The majority of scientists say the earth is round. They can’t all be lying?',
+    summary: 'The claim is that the number of working astronomers is small and that careers depend on not dissenting.',
+    answer: [
+      'There are fewer than a thousand serious professional astronomers. It is impossible to earn well while contradicting mainstream science, and schools will remove a teacher who departs from the syllabus.',
+      'Most people never notice, because exams reward repeating the textbook. You do not get to question it without losing marks and losing any chance of a job in astronomy. Only by not thinking independently do you get the A.',
+      'Prominent astronomers have made embarrassing claims of their own. Neil deGrasse Tyson said the earth was not round but pear-shaped, which contradicts the very images being defended.',
+      'Once you allow for the possibility of a lie, a great many things start making more sense, and not only about this subject. Consider that intelligence agencies love to hire Ivy League graduates: people who studied into their thirties, got straight As and never questioned the material. That makes them easy to profile and hire, and very unlikely to change their minds, because they cannot accept that the education they paid so much for contained falsehoods.',
+      'Plenty of scientists, engineers and military personnel do speak out, and they are ignored. Flat earth radio shows interview military people regularly. As long as mainstream media declines to notice, the majority will not either.',
+    ],
+    tags: ['consensus', 'astronomers', 'academia', 'neil degrasse tyson'],
+  },
+  {
+    id: 'controlling-science',
+    category: 'motive',
+    question: 'How can the scientific community be controlled?',
+    summary: 'Through curricula, textbooks, examinations, grant funding and ownership of the outlets.',
+    answer: [
+      'The same way most things are. Control the media, the textbooks, the testing, how schools are run and which grants are funded. Own the major outlets and you can mock any theory you dislike out of circulation.',
+      'Everyone knows the media is managed, and that extends online. There is plenty you cannot find on Google. Google itself has been shown returning curvature as 8 inches per mile in its first result rather than 8 inches per mile squared, which is wrong because a straight-line figure is not a curve. You can check with any curvature calculator.',
+      'This is why some people turn to Tor and the darknet for information. Good information is hard to find precisely because the surface is managed.',
+    ],
+    tags: ['media', 'curriculum', 'grants', 'google', 'censorship'],
+  },
+  {
+    id: 'internet-shills',
+    category: 'motive',
+    question: 'So how is internet opinion controlled?',
+    summary: 'Through paid posters, bots, sockpuppet accounts and editorial policy that rules the subject out in advance.',
+    answer: [
+      'Through what are commonly called shills. There are many articles about Wikipedia edits originating from IP ranges traced to intelligence data centres and to the Vatican. Wikipedia’s own policy pages on neutral point of view and due weight single out flat earth and explain that it will not be given attention because it contradicts the status quo. So the entry only states why the earth is not flat and gives no useful citation for the model, and you cannot add to it, because the policy forbids it. Of all the subjects available to censor, why this one?',
+      'There is also ample documentation of governments creating false social media profiles, buying software to manage them, and posting from them daily. Mostly the output is ridicule. You will read "if you believe this you should kill yourself" and "what a moron" and general ad hominem. They do not debate facts; they change the subject. Some of it is simply bots.',
+      'Sometimes they exploit gaps in your knowledge, forcing you to study more or asking unanswerable questions. But point out a serious problem in the ball model and they do not defend it — they fall back on the majority believing it, so it must be true. The majority is usually uninformed about most things.',
+      'If you do hold this view you may face friends who insult you, because very few people want to consider that they were taught falsehoods in school, and that can be isolating. It is sad that childish insults work, but they do. Most people are too lazy to take the subject seriously. I have sent videos to friends who insulted my beliefs and then admitted they had not watched a minute of it.',
+      'Condemnation without investigation is the height of ignorance. You cannot honestly insult an idea you have never researched. Study the sun, moon and stars and you will be rewarded with inspiration.',
+    ],
+    tags: ['shills', 'wikipedia', 'bots', 'sockpuppets', 'ridicule'],
+  },
+  {
+    id: 'is-it-religious',
+    category: 'motive',
+    question: 'Is the flat earth a religious argument?',
+    summary: 'No. It is presented as a cosmology and a method, though it does credit ancient observers.',
+    answer: [
+      'No, though it does give more credit to our ancestors, who were not the fools they are made out to be. There are thousands of religions, and this is not an argument to strengthen any of them. It is the scientific method used the way it was meant to be used.',
+      'In modern scientism there is a famous line attributed to Einstein: "if the facts don’t fit the theory, change the facts." No wonder they made him man of the century. What man of science says something that dogmatic?',
+      'Tesla invented the radio, alternating current and hundreds of things that make up the modern world. Gandhi persuaded millions to resist an army peacefully and succeeded. A great many fine minds went unnoticed.',
+      'Modern science has become dogmatic and religious in tone. You are told you may not question certain findings, and that 97% of scientists agree on them. I am fairly sure 97% of scientists have never agreed on anything. It is a manufactured statistic, contested constantly and blocked by political dogma.',
+    ],
+    tags: ['religion', 'scientism', 'einstein', 'tesla', 'dogma'],
+  },
+  {
+    id: 'ufos',
+    category: 'motive',
+    question: 'What about UFOs and aliens?',
+    summary: 'Possibly airships and military craft. The model treats the question as outside its scope.',
+    answer: [
+      'There is evidence of unidentified craft, and governments usually call them weather balloons, aircraft or unknown objects. That may hold some truth.',
+      'Some argue the Hindenburg was sabotaged to kill the airship industry and stop private parties building large craft and surveying the poles. It is not hard to imagine how many fast and interesting aircraft could be built from airships, and the electromagnetic spectrum holds enough surprises that military technology for faster craft is easy to assume. But they might simply be balloons.',
+      'Could there be aliens? Perhaps. Some argue for demons and angels. Those are beliefs, and the flat earth is a study of astronomy and physics, not of spirituality. If you are drawn to intelligent design or to alien theories, the flat model only strengthens the case, because nearby intelligent life is more reasonable than life millions of light years away that could never reach us. And since light moves at different speeds through different media, the light year is already a questionable unit.',
+    ],
+    tags: ['ufo', 'aliens', 'hindenburg', 'airship'],
+  },
+  {
+    id: 'proving-it',
+    category: 'motive',
+    question: 'How can the theory be proven once and for all?',
+    summary: 'Measure the southern circumference directly with a coordinated, independent balloon circumnavigation.',
+    keyPoints: [
+      'Several balloons or airships, triangulating each other’s speed and orientation.',
+      'Solar, compass, GPS and stellar navigation combined so no single system can be blamed.',
+      'Cheap and reproducible enough that other teams can repeat it independently.',
+      'If the southern circumference is significantly larger, the ball is finished.',
+    ],
+    answer: [
+      'There should be an open-source attempt to circumnavigate the southern rim using balloons, blimps or airships, and simply measure it. Optical observations can always be argued away, so the strongest proof is the simplest one. If the circumference at the southern rim is significantly larger than a sphere allows, we are not on a ball.',
+      'Several craft would be needed so they can triangulate each other’s speeds and orientations. They should combine navigation systems — solar, compass, GPS and possibly stellar — so there is no chance of drifting off course unnoticed and no single system to blame afterwards.',
+      'The balloons could make scheduled stops to wait for ideal conditions or for the others to reach triangulation positions. They should be self-powered with sufficient gas or solar, compact enough not to be intercepted or shot down, and should record as much of the journey as possible.',
+      'From there, variations of the experiment can be run. It needs to be cheap and easy enough that anyone can reproduce it, so more and more people can run it and end the debate.',
+    ],
+    tags: ['experiment', 'circumnavigation', 'balloon', 'proof', 'open source'],
+  },
+  {
+    id: 'closing',
+    category: 'motive',
+    question: 'If you read this far…',
+    summary: 'A closing note on why the search for truth is an individual journey.',
+    answer: [
+      'Then hopefully this FAQ has opened your mind and shown that the flat earth is more than a passing fad. It is the result of years of research. If you find small omissions or errors, weigh them against the volume of material and concentrate on the parts worth keeping and investigating.',
+      'The search for truth is an individual journey. This was written to answer common questions as thoroughly as we could, not to change your mind. We do not want you walking around for the rest of your life feeling cheated and unable to trust anyone.',
+      'On the contrary. Sometimes it rains, then it clears, the sun comes out and a halo appears around it, and you smile — because nothing lasts forever. Empires fall and things change. One day history will look back and be amazed at how much was fought over so little.',
+      'We hope schools eventually teach children to sew, cook, farm, use chemicals, study botany, manage an account and a business, program, build, repair, make art, use a telescope, run experiments, ask questions, meditate, play, socialise, and be kind — instead of filling eighteen years with the theories of old men.',
+      'There are people worth trusting throughout the government sector; compartmentalisation makes sure most of them know very little. We do not know where the chain of command ends or who is running things. But it begins with you, the reader.',
+      'This is not meant to alienate anyone. Use your instincts and start questioning some of the science you were taught. A great deal of theory became dogma, dogma became scientism, and people are afraid of losing it. Losing it may be the best thing that happens to you, because what you learn next will make more sense.',
+      'That is not limited to this subject. It extends to anything built on things you cannot see or verify for yourself. The flat earth has stood the test of time; it is ancient cosmology with thousands of years behind it, however the history gets rewritten. Trust your own instincts. At the very least we start with a clean slate, a blank page, and new horizons to explore.',
+    ],
+    tags: ['closing', 'conclusion', 'research'],
+  },
+];
+
+export const faqs: FaqEntry[] = [
+  ...foundationsFaqs,
+  ...horizonFaqs,
+  ...lightFaqs,
+  ...skyFaqs,
+  ...physicsFaqs,
+  ...mapsFaqs,
+  ...spaceFaqs,
+  ...motiveFaqs,
+];
+
+/** Lookup by slug, used by the quick-jump cards and by deep links. */
+export const faqById = new Map(faqs.map((entry) => [entry.id, entry]));
+
+export const faqsByCategory = (categoryId: string): FaqEntry[] =>
+  faqs.filter((entry) => entry.category === categoryId);
