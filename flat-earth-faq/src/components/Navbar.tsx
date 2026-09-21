@@ -39,6 +39,7 @@ export function Navbar() {
   return (
     <>
       <header
+        style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
             ? 'border-b border-steel-700/70 bg-void-900/85 backdrop-blur-xl'
