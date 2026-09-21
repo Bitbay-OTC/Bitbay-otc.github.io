@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the sticky header. */
+    scroll-padding-top: 6.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-void-900 font-sans text-steel-200 antialiased;
+  }
+
+  ::selection {
+    @apply bg-glow-400/30 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-glow-400/70 ring-offset-2 ring-offset-void-900;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-steel-700/70 bg-void-700/70 backdrop-blur-sm;
+  }
+
+  .panel-inset {
+    @apply rounded-xl border border-steel-700/60 bg-void-800/80;
+  }
+
+  .eyebrow {
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-glow-400/80;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-steel-700 bg-void-800/80 px-3 py-1 text-xs font-medium text-steel-300 transition-colors;
+  }
+
+  .chip-active {
+    @apply border-glow-400/60 bg-glow-400/10 text-glow-300;
+  }
+
+  /* Diagram control buttons share one look across all five diagrams. */
+  .diagram-btn {
+    @apply inline-flex items-center gap-1.5 rounded-lg border border-steel-700 bg-void-800/90 px-3 py-1.5 text-xs font-semibold text-steel-300 transition-all hover:border-steel-500 hover:text-steel-200 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .diagram-btn-active {
+    @apply border-glow-400/70 bg-glow-400/10 text-glow-300 shadow-glow;
+  }
+
+  .diagram-btn-gold {
+    @apply border-gold-500/70 bg-gold-500/10 text-gold-400;
+  }
+
+  /* Range inputs: Tailwind cannot reach the vendor pseudo-elements, so they are
+     styled here once and reused by every diagram that exposes a slider. */
+  .slider {
+    @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-steel-700;
+  }
+
+  .slider::-webkit-slider-thumb {
+    @apply h-4 w-4 appearance-none rounded-full border-2 border-void-900 bg-glow-400 transition-transform;
+    box-shadow: 0 0 12px rgba(56, 224, 255, 0.6);
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  .slider::-moz-range-thumb {
+    @apply h-4 w-4 rounded-full border-2 border-void-900 bg-glow-400;
+    box-shadow: 0 0 12px rgba(56, 224, 255, 0.6);
+  }
+
+  .slider-gold::-webkit-slider-thumb {
+    @apply bg-gold-500;
+    box-shadow: 0 0 12px rgba(245, 196, 81, 0.6);
+  }
+
+  .slider-gold::-moz-range-thumb {
+    @apply bg-gold-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Thin scrollbar for the horizontally scrolling category rail. */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
